@@ -27,8 +27,8 @@ html {
 body {
   margin: 0;
   background:
-    linear-gradient(90deg, rgba(21, 23, 19, 0.035) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(21, 23, 19, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(21, 23, 19, 0.026) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(21, 23, 19, 0.022) 1px, transparent 1px),
     var(--bg);
   background-size: 4.5rem 4.5rem;
   color: var(--text);
@@ -91,17 +91,17 @@ h4 {
 }
 
 h1 {
-  margin-bottom: 0.35rem;
-  font-size: clamp(4rem, 10vw, 8.8rem);
+  margin-bottom: 0.8rem;
+  font-size: clamp(3.5rem, 8.4vw, 7.5rem);
   font-weight: 820;
-  line-height: 0.9;
+  line-height: 0.94;
 }
 
 h2 {
   margin-bottom: 1rem;
-  font-size: clamp(2rem, 5vw, 4.8rem);
+  font-size: clamp(2rem, 4.2vw, 3.8rem);
   font-weight: 790;
-  line-height: 0.96;
+  line-height: 1;
 }
 
 h3 {
@@ -225,7 +225,7 @@ main,
 }
 
 .hero {
-  padding: clamp(4rem, 10vw, 8.2rem) 0 clamp(2.7rem, 7vw, 5rem);
+  padding: clamp(3.2rem, 7vw, 6.4rem) 0 clamp(2.5rem, 5vw, 4rem);
   border-bottom: 1px solid var(--line);
 }
 
@@ -265,7 +265,7 @@ dt {
 }
 
 .hero-title {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.05rem;
   color: var(--text);
   font-size: clamp(1.25rem, 2.3vw, 2rem);
   font-weight: 760;
@@ -359,7 +359,7 @@ dt {
 }
 
 .section {
-  padding: clamp(4.2rem, 8vw, 7rem) 0;
+  padding: clamp(3.6rem, 6.4vw, 5.8rem) 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -397,7 +397,7 @@ dt {
 }
 
 .research-copy p {
-  max-width: 50rem;
+  max-width: 46rem;
   color: var(--muted);
   font-size: 1.05rem;
 }
@@ -446,7 +446,7 @@ dd {
   display: grid;
   grid-template-columns: 2.8rem minmax(0, 1fr) minmax(14rem, 0.34fr);
   gap: clamp(1rem, 3vw, 2.5rem);
-  padding: clamp(1.8rem, 4vw, 3rem) 0;
+  padding: clamp(1.7rem, 3.4vw, 2.55rem) 0;
   border-top: 1px solid var(--line);
 }
 
@@ -559,7 +559,7 @@ dd {
 .artifact-panel {
   align-self: start;
   min-width: 0;
-  padding: 1rem;
+  padding: 1rem 1.05rem;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.48);
 }
@@ -636,7 +636,8 @@ dd {
 }
 
 .contact-panel h2 {
-  max-width: 50rem;
+  max-width: 44rem;
+  font-size: clamp(2rem, 4vw, 3.65rem);
 }
 
 .contact-panel p {
@@ -720,6 +721,10 @@ dd {
     background-size: 3rem 3rem;
   }
 
+  .site-header {
+    position: static;
+  }
+
   .top-nav,
   main,
   .site-footer {
@@ -754,11 +759,11 @@ dd {
   }
 
   h1 {
-    font-size: clamp(3.4rem, 18vw, 5.8rem);
+    font-size: clamp(3.15rem, 16vw, 5rem);
   }
 
   h2 {
-    font-size: clamp(2rem, 10.5vw, 3.3rem);
+    font-size: clamp(1.9rem, 9.5vw, 3rem);
   }
 
   .proof-strip,
@@ -787,7 +792,7 @@ dd {
   }
 
   .section {
-    padding: 3.6rem 0;
+    padding: 3.25rem 0;
   }
 
   .case-study,
