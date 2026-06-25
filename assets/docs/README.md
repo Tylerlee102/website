@@ -1,10 +1,10 @@
 # Documents
 
-Place downloadable files for the site in this folder.
+Downloadable portfolio documents live here.
 
-- `resume.pdf` for the resume download button
+- `resume.pdf` for the resume button once Tyler provides a publish-ready resume
 - `mxfp4-gdn-draft.pdf` for the MXFP4 research section
-- `copper-conference-draft-review.pdf` for the COPPER project card
-- Future project reports or one-page PDFs, if needed
+- `copper-conference-draft-review.pdf` for the COPPER case study
+- Future verified project reports or one-page PDFs
 
-After adding a file, update the matching disabled control in `index.html` to a real link.
+After adding a new public document, update the matching link in `index.html`.
