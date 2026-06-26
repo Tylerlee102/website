@@ -10,12 +10,7 @@
   --accent: #2d625c;
   --accent-dark: #173f3b;
   --accent-soft: #dfeae6;
-  --steel: #38515a;
-  --copper: #8b6044;
-  --warning-bg: #f8eee8;
-  --shadow: 0 24px 80px rgba(18, 23, 21, 0.08);
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
-  --ease-soft: cubic-bezier(0.25, 1, 0.5, 1);
   --mono: "Cascadia Code", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   --sans: "Aptos", "Segoe UI Variable", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --display: "Aptos Display", "Segoe UI Variable Display", var(--sans);
@@ -341,28 +336,6 @@ dt {
   font-weight: 780;
 }
 
-.hero-snapshot {
-  grid-column: 1;
-  margin-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-top: 1px solid var(--line);
-}
-
-.hero-snapshot div {
-  min-width: 0;
-  padding: 0.95rem 1rem 0 0;
-  border-right: 1px solid var(--line);
-}
-
-.hero-snapshot div + div {
-  padding-left: 1rem;
-}
-
-.hero-snapshot div:last-child {
-  border-right: 0;
-}
-
 .hero-panel {
   align-self: stretch;
   padding: 1.15rem 1.2rem;
@@ -429,61 +402,6 @@ dd {
   color: var(--muted);
   font-size: 0.84rem;
   line-height: 1.42;
-}
-
-.hero-artifact {
-  grid-column: 2;
-  grid-row: 1 / span 2;
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.hero-artifact img {
-  max-height: 39rem;
-  object-fit: contain;
-}
-
-.hero-artifact a {
-  display: block;
-}
-
-.evidence-rail {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  border-bottom: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.42);
-}
-
-.evidence-rail div {
-  min-width: 0;
-  padding: 1.05rem 1rem 1.15rem 0;
-  border-right: 1px solid var(--line);
-}
-
-.evidence-rail div + div {
-  padding-left: 1rem;
-}
-
-.evidence-rail div:last-child {
-  border-right: 0;
-}
-
-.evidence-rail span {
-  display: block;
-  margin-bottom: 0.3rem;
-  color: var(--accent);
-  font-family: var(--mono);
-  font-size: 0.74rem;
-  font-weight: 820;
-}
-
-.evidence-rail p {
-  margin-bottom: 0;
-  color: var(--muted);
-  font-size: 0.93rem;
-  line-height: 1.4;
 }
 
 .section {
@@ -584,10 +502,6 @@ dd {
   border-bottom: 1px solid var(--line);
 }
 
-.case-study-featured {
-  grid-template-columns: minmax(8.5rem, 0.22fr) minmax(0, 0.9fr) minmax(18rem, 0.48fr);
-}
-
 .case-meta {
   display: grid;
   align-content: start;
@@ -669,12 +583,17 @@ dd {
 
 .artifact-links a,
 .site-footer a,
-.contact-panel a {
+.contact-panel dl a,
+.hero-panel dd a,
+.research-meta dd a {
   min-height: 2.75rem;
   display: inline-flex;
   align-items: center;
   color: var(--accent-dark);
   font-weight: 780;
+  transition:
+    color 160ms var(--ease-out),
+    transform 160ms var(--ease-out);
 }
 
 section[id] {
@@ -691,12 +610,6 @@ section[id] {
   font-size: 0.93rem;
 }
 
-.warning-note {
-  border-color: rgba(139, 96, 68, 0.35);
-  background: var(--warning-bg);
-  color: #6d4933;
-}
-
 .case-media {
   align-self: start;
   box-shadow: none;
@@ -711,10 +624,6 @@ section[id] {
 .case-media.wide img {
   aspect-ratio: 16 / 10;
   object-fit: contain;
-}
-
-.warning-frame {
-  border-color: rgba(139, 96, 68, 0.42);
 }
 
 .focus-grid {
@@ -759,7 +668,7 @@ section[id] {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   border-top: 1px solid var(--line);
 }
 
@@ -840,6 +749,17 @@ section[id] {
   .case-study:hover .artifact-frame {
     border-color: var(--accent);
   }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .artifact-links a:hover,
+    .site-footer a:hover,
+    .contact-panel dl a:hover,
+    .hero-panel dd a:hover,
+    .research-meta dd a:hover,
+    .text-link:hover {
+      transform: translateY(-1px);
+    }
+  }
 }
 
 @media (max-width: 1100px) {
@@ -855,30 +775,7 @@ section[id] {
     grid-template-columns: 1fr;
   }
 
-  .hero-artifact,
-  .hero-snapshot {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .hero-artifact {
-    width: min(100%, 36rem);
-  }
-
-  .evidence-rail {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .evidence-rail div:nth-child(2) {
-    border-right: 0;
-  }
-
-  .evidence-rail div:nth-child(n + 3) {
-    border-top: 1px solid var(--line);
-  }
-
-  .case-study,
-  .case-study-featured {
+  .case-study {
     grid-template-columns: minmax(8rem, 0.25fr) minmax(0, 1fr);
   }
 
@@ -918,22 +815,18 @@ section[id] {
     font-size: 1.3rem;
   }
 
-  .research-grid,
-  .hero-snapshot {
+  .research-grid {
     grid-template-columns: 1fr;
   }
 
   .research-grid div,
-  .research-grid div + div,
-  .hero-snapshot div,
-  .hero-snapshot div + div {
+  .research-grid div + div {
     padding-left: 0;
     padding-right: 0;
     border-right: 0;
   }
 
-  .research-grid div + div,
-  .hero-snapshot div + div {
+  .research-grid div + div {
     border-top: 1px solid var(--line);
   }
 }
@@ -967,8 +860,8 @@ section[id] {
   }
 
   .nav-links a {
-    min-height: 2.15rem;
-    padding: 0.42rem 0.42rem;
+    min-height: 2.75rem;
+    padding: 0.52rem 0.42rem;
     font-size: 0.88rem;
   }
 
@@ -993,14 +886,10 @@ section[id] {
     font-size: 1.02rem;
   }
 
-  .evidence-rail,
   .skills-grid {
     grid-template-columns: 1fr;
   }
 
-  .evidence-rail div,
-  .evidence-rail div + div,
-  .evidence-rail div:nth-child(2),
   .skills-grid section,
   .skills-grid section + section,
   .skills-grid section:last-child,
@@ -1010,20 +899,11 @@ section[id] {
     border-right: 0;
   }
 
-  .evidence-rail div {
-    border-top: 1px solid var(--line);
-  }
-
-  .evidence-rail div:first-child {
-    border-top: 0;
-  }
-
   .section {
     padding: 3.5rem 0;
   }
 
-  .case-study,
-  .case-study-featured {
+  .case-study {
     grid-template-columns: 1fr;
     gap: 0.95rem;
   }
@@ -1111,7 +991,13 @@ section[id] {
 
   .button,
   .case-study,
-  .artifact-frame {
+  .artifact-frame,
+  .artifact-links a,
+  .site-footer a,
+  .contact-panel dl a,
+  .hero-panel dd a,
+  .research-meta dd a,
+  .text-link {
     transform: none !important;
   }
 }

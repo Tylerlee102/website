@@ -39,8 +39,6 @@ Put project images in `assets/img/`.
 Current assets:
 
 - `mxfp4-gdn-datapath.png`
-- `europa-dashboard.png`
-- `sdc-coverage.png`
 - `copper-review.jpg`
 
 Use only real project images or diagrams. Do not add AI-generated images. Add `width`, `height`, and useful `alt` text for images shown directly on the page.
