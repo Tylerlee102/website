@@ -3,3 +3,11 @@ Thumbs.db
 desktop.ini
 .vscode/
 .idea/
+
+# Local agent/skill installs
+.agents/
+skills-lock.json
+
+# Generated GitHub agent skill installs and hooks
+.github/skills/
+.github/hooks/

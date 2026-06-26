@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta
       name="description"
-      content="Tyler Lee's electrical engineering portfolio for embedded systems, FPGA and digital design, robotics, hardware systems, and evidence-backed research prototypes."
+      content="Tyler Lee's electrical and computer engineering portfolio for FPGA/RTL, embedded systems, hardware, robotics, and engineering research opportunities."
     >
     <meta name="author" content="Tyler Lee">
-    <meta property="og:title" content="Tyler Lee | Electrical Engineering Portfolio">
+    <meta property="og:title" content="Tyler Lee | Electrical and Computer Engineering Portfolio">
     <meta
       property="og:description"
-      content="Embedded systems, FPGA and digital design, robotics, hardware systems, and research prototype portfolio."
+      content="Recruiter-ready engineering portfolio with FPGA/RTL, embedded systems, hardware, robotics, and research project evidence."
     >
     <meta property="og:type" content="website">
-    <title>Tyler Lee | Electrical Engineering Portfolio</title>
+    <title>Tyler Lee | Electrical and Computer Engineering Portfolio</title>
     <link rel="stylesheet" href="assets/css/styles.css">
   </head>
   <body>
@@ -24,15 +24,15 @@
       <nav class="top-nav" aria-label="Primary navigation">
         <a class="brand" href="#top" aria-label="Tyler Lee home">
           <span>Tyler Lee</span>
-          <small>Electrical Engineering</small>
+          <small>EE / Computer Engineering</small>
         </a>
         <div class="nav-links">
           <a href="#research">Research</a>
           <a href="#projects">Projects</a>
-          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
-          <a class="nav-resume is-disabled" href="#contact">Resume coming soon</a>
+          <a href="https://github.com/Tylerlee102">GitHub</a>
         </div>
       </nav>
     </header>
@@ -40,79 +40,112 @@
     <main id="main">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-grid">
-          <div class="hero-kicker">Portfolio / 2026</div>
           <div class="hero-copy">
-            <p class="eyebrow">Embedded systems / FPGA / Robotics / Hardware systems</p>
+            <p class="hero-label">Electrical / Computer Engineering portfolio</p>
             <h1 id="hero-title">Tyler Lee</h1>
-            <p class="hero-title">Electrical Engineering Student</p>
+            <p class="hero-title">
+              Hardware-focused student targeting FPGA/RTL, embedded systems, robotics,
+              and engineering research opportunities.
+            </p>
             <p class="hero-lede">
-              Electrical engineering student building hardware-focused research prototypes across embedded systems,
-              FPGA acceleration, digital design, robotics, and practical hardware/software integration.
+              This portfolio emphasizes inspectable work: an MXFP4 FPGA research draft,
+              a computer-architecture review, a Europa radar confidence visualization,
+              and an early reliability-modeling plot. Claims stay within the evidence
+              currently available in this repository.
             </p>
             <div class="hero-actions" aria-label="Primary actions">
-              <a class="button button-primary" href="#research">View Research</a>
-              <a class="button" href="#projects">View Projects</a>
-              <a class="button" href="https://github.com/Tylerlee102">GitHub</a>
-              <a class="button button-muted" href="#contact">Resume coming soon</a>
+              <a class="button button-primary" href="#projects">View engineering work</a>
+              <a class="button button-secondary" href="assets/docs/mxfp4-gdn-draft.pdf">Read MXFP4 draft</a>
+              <a class="text-link" href="https://github.com/Tylerlee102">github.com/Tylerlee102</a>
             </div>
           </div>
-        </div>
-      </section>
 
-      <section class="proof-strip" aria-label="Portfolio snapshot">
-        <div>
-          <span>Research</span>
-          <p>FPGA acceleration and computer architecture artifacts</p>
-        </div>
-        <div>
-          <span>Hardware</span>
-          <p>Embedded systems, digital logic, microcontrollers, and robotics</p>
-        </div>
-        <div>
-          <span>Tools</span>
-          <p>C++, Python, MATLAB, Vivado, KiCad, CAD, and GitHub</p>
-        </div>
-        <div>
-          <span>Seeking</span>
-          <p>Hardware, embedded, FPGA, robotics, and research internships</p>
+          <aside class="hero-panel" aria-label="Recruiter snapshot">
+            <h2>Recruiter snapshot</h2>
+            <dl>
+              <div>
+                <dt>Target roles</dt>
+                <dd>Hardware, embedded, FPGA, robotics, and research internships</dd>
+              </div>
+              <div>
+                <dt>Strongest public evidence</dt>
+                <dd>MXFP4 FPGA draft, datapath diagram, and COPPER-LINE research review</dd>
+              </div>
+              <div>
+                <dt>Verified public link</dt>
+                <dd><a href="https://github.com/Tylerlee102">GitHub profile</a></dd>
+              </div>
+              <div>
+                <dt>Resume</dt>
+                <dd>Resume PDF pending</dd>
+              </div>
+            </dl>
+          </aside>
         </div>
       </section>
 
       <section class="section research-section" id="research" aria-labelledby="research-title">
-        <div class="section-marker">
-          <span>01</span>
-          <p>Research Paper</p>
+        <div class="section-heading">
+          <p class="section-label">Featured FPGA / RTL work</p>
+          <h2 id="research-title">Native MXFP4 Gated DeltaNet decode research draft.</h2>
+          <p>
+            An FPGA-oriented research prototype for one Gated DeltaNet decode layer, focused
+            on persistent on-chip state and native MXFP4 arithmetic.
+          </p>
         </div>
 
         <article class="research-feature">
           <div class="research-copy">
-            <p class="status">Draft / In progress</p>
-            <h2 id="research-title">Native MXFP4 Gated DeltaNet FPGA Accelerator</h2>
-            <p class="problem">
-              Problem: explore whether a persistent-state Gated DeltaNet decode layer can be represented with
-              native MXFP4 arithmetic and an FPGA-oriented datapath while keeping the evidence boundary explicit.
+            <p class="research-lede">
+              The public evidence includes a draft PDF and datapath diagram. The draft describes
+              FP32 and MXFP4 reference paths, deterministic test vectors, a Vitis HLS/C++ kernel
+              structure, RTL cosimulation, and Vivado-reported implementation evidence. It does
+              not claim production hardware, publication, or external model-quality validation.
             </p>
-            <p>
-              This draft artifact includes FP32 and MXFP4 references, deterministic vector generation, Vitis HLS
-              sources, Vivado/cosimulation evidence, and a paper-number pipeline for reproducible reporting.
-              Current results are framed as simulation evidence; external model-quality and perplexity claims are
-              intentionally excluded until capture-driven validation is complete.
-            </p>
+
+            <div class="research-grid" aria-label="Research summary">
+              <div>
+                <h3>What it is</h3>
+                <p>
+                  A simulation-framed FPGA research prototype studying native MXFP4 arithmetic
+                  inside a stateful Gated DeltaNet decode path.
+                </p>
+              </div>
+              <div>
+                <h3>Tyler contributed</h3>
+                <p>
+                  Reference paths, deterministic vectors, HLS structure, datapath documentation,
+                  and a draft report with explicit evidence boundaries.
+                </p>
+              </div>
+              <div>
+                <h3>Current status</h3>
+                <p>
+                  Research draft/prototype. Realistic activation capture and model-quality
+                  validation remain future work.
+                </p>
+              </div>
+            </div>
+
             <div class="research-actions">
               <a class="button button-primary" href="assets/docs/mxfp4-gdn-draft.pdf">Read draft PDF</a>
-              <a class="button" href="#contact">Discuss the artifact</a>
+              <a class="button button-secondary" href="assets/img/mxfp4-gdn-datapath.png">Open datapath</a>
             </div>
           </div>
 
           <aside class="research-meta" aria-label="Research metadata">
             <dl>
               <div>
-                <dt>Stack</dt>
-                <dd>Vitis HLS, C++, Vivado, FPGA</dd>
+                <dt>Technologies</dt>
+                <dd>Vitis HLS, C++, Vivado, RTL cosimulation, MXFP4 E2M1/E8M0</dd>
               </div>
               <div>
-                <dt>Evidence</dt>
-                <dd>Draft PDF, datapath diagram, simulation-oriented implementation notes</dd>
+                <dt>Evidence links</dt>
+                <dd>
+                  <a href="assets/docs/mxfp4-gdn-draft.pdf">Draft PDF</a>
+                  and
+                  <a href="assets/img/mxfp4-gdn-datapath.png">datapath diagram</a>
+                </dd>
               </div>
               <div>
                 <dt>Boundary</dt>
@@ -124,263 +157,248 @@
       </section>
 
       <section class="section" id="projects" aria-labelledby="projects-title">
-        <div class="section-marker">
-          <span>02</span>
-          <p>Projects</p>
-        </div>
-
         <div class="section-heading">
-          <h2 id="projects-title">Engineering case studies.</h2>
+          <p class="section-label">Selected engineering work</p>
+          <h2 id="projects-title">Projects with clear evidence links.</h2>
           <p>
-            Selected projects with draft reports, diagrams, screenshots, and clearly marked evidence boundaries.
+            Each project states what is visible in the repository, what Tyler contributed,
+            the current status, and any caveat needed to avoid overstating the work.
           </p>
         </div>
 
         <div class="case-list">
-          <article class="case-study case-study-featured">
-            <div class="case-index" aria-hidden="true">01</div>
-            <div class="case-body">
-              <p class="case-category">Research / FPGA acceleration</p>
-              <h3>MXFP4 Gated DeltaNet Accelerator</h3>
-              <p class="case-outcome">
-                A hardware-oriented research artifact for studying a native MXFP4 arithmetic path in a stateful
-                Gated DeltaNet decode layer.
-              </p>
-              <div class="case-detail">
-                <h4>What I built</h4>
-                <p>
-                  FP32 and MXFP4 references, deterministic vectors, HLS sources, and a structured draft artifact
-                  that separates implementation evidence from claims that still need external validation.
-                </p>
-              </div>
-              <div class="tag-row" aria-label="Technical stack">
-                <span>Vitis HLS</span>
-                <span>C++</span>
-                <span>Vivado</span>
-                <span>FPGA</span>
-              </div>
-              <div class="artifact-links">
-                <a href="assets/docs/mxfp4-gdn-draft.pdf">Draft PDF</a>
-                <a href="assets/img/mxfp4-gdn-datapath.png">Datapath diagram</a>
-              </div>
-              <p class="evidence-note">
-                MXFP4 combines compact E2M1 elements with E8M0 block scales. GDN refers to the Gated DeltaNet
-                layer under study. Current results remain simulation-framed.
-              </p>
-            </div>
-            <figure class="case-media contain">
-              <img
-                src="assets/img/mxfp4-gdn-datapath.png"
-                width="720"
-                height="940"
-                alt="Token-level datapath diagram showing MXFP4 packing, stateful Gated DeltaNet compute, on-chip state, and native MXFP4 arithmetic stages."
-                loading="lazy"
-              >
-              <figcaption>Datapath diagram: MXFP4 pack, stateful GDN compute, on-chip state, and native arithmetic path.</figcaption>
-            </figure>
-          </article>
-
           <article class="case-study">
-            <div class="case-index" aria-hidden="true">02</div>
-            <div class="case-body">
-              <p class="case-category">Scientific modeling / Visual artifact</p>
-              <h3>Europa Radar Flyby Model</h3>
-              <p class="case-outcome">
-                A synthetic radar-interpretation dashboard artifact exploring confidence, ambiguity, and scenario
-                framing for Europa flyby-style analysis.
-              </p>
-              <div class="case-detail">
-                <h4>Current evidence</h4>
-                <p>
-                  The repository currently includes a dashboard export, not the underlying workbook, source model, or
-                  live demo. It is presented as a supporting visual artifact and synthetic analysis concept, not
-                  mission-validated evidence.
-                </p>
-              </div>
-              <div class="tag-row" aria-label="Technical stack">
-                <span>Dashboard artifact</span>
-                <span>Radar interpretation</span>
-                <span>Synthetic framing</span>
-                <span>Source pending</span>
-              </div>
-              <div class="artifact-links">
-                <a href="assets/img/europa-dashboard.png">Supporting dashboard image</a>
-              </div>
-              <p class="evidence-note">
-                The dashboard image is included as a supporting artifact because some chart labels are cramped in
-                the source export.
-              </p>
+            <div class="case-meta">
+              <span>FPGA / RTL / digital systems</span>
+              <strong>Research draft</strong>
             </div>
-            <aside class="artifact-panel" aria-label="Europa supporting artifact">
-              <p class="artifact-label">Supporting artifact</p>
-              <p>
-                Dashboard preview with tabular source notes and synthetic confidence-layer output.
-              </p>
-            </aside>
-          </article>
-
-          <article class="case-study">
-            <div class="case-index" aria-hidden="true">03</div>
             <div class="case-body">
-              <p class="case-category">Reliability research / Concept artifact</p>
-              <h3>SDC-Spec Testbed</h3>
+              <p class="case-category">Prefetching / provenance / RTL review</p>
+              <h3>COPPER-LINE committed pointer-provenance prefetching</h3>
               <p class="case-outcome">
-                A local testbed concept for studying speculative decoding as a possible fault-detection path for
-                accelerator inference.
+                Computer-architecture research draft proposing an authority rule for
+                data-memory-dependent prefetching: prefetch only from source words proven by
+                committed execution and still clean.
               </p>
               <div class="case-detail">
-                <h4>Current evidence</h4>
+                <h4>Tyler contributed</h4>
                 <p>
-                  The visible artifact in this repository is a coverage plot. Source code, reproduction instructions,
-                  and a report should be linked before claiming runnable methodology or benchmark behavior.
-                </p>
-              </div>
-              <div class="tag-row" aria-label="Technical stack">
-                <span>Coverage plot</span>
-                <span>Fault-model concept</span>
-                <span>Speculative decoding</span>
-                <span>Source pending</span>
-              </div>
-              <div class="artifact-links">
-                <a href="assets/img/sdc-coverage.png">View coverage plot</a>
-              </div>
-              <p class="evidence-note">
-                Audit note: the source plot labels the y-axis as conditional probability, but the red series appears
-                to exceed 1.0 near the right edge. The plot is kept as a linked artifact rather than a primary visual
-                until the generating formula or label is verified.
-              </p>
-            </div>
-            <aside class="artifact-panel warning" aria-label="SDC-Spec graph audit note">
-              <p class="artifact-label">Graph audit</p>
-              <p>
-                Probability-like axis requires source verification before it should be used as a headline visual.
-              </p>
-            </aside>
-          </article>
-
-          <article class="case-study">
-            <div class="case-index" aria-hidden="true">04</div>
-            <div class="case-body">
-              <p class="case-category">Computer architecture / Prefetching</p>
-              <h3>COPPER Prefetching Research</h3>
-              <p class="case-outcome">
-                A research prototype for committed pointer-provenance prefetching, focused on giving
-                data-memory-dependent prefetchers narrow authority instead of acting on pointer-shaped data.
-              </p>
-              <div class="case-detail">
-                <h4>What I built</h4>
-                <p>
-                  A review artifact covering trace models, RTL/SVA validation, bounded checkers, and gem5 ARM/AArch64
-                  runs, positioned as a safety-authority mechanism rather than a universal replacement for existing
-                  prefetchers.
+                  The included draft/review covers the mechanism, trace simulation,
+                  ARM/AArch64 gem5 evaluation, RTL/SVA validation framing, bounded-checker
+                  evidence, and prior-art/security positioning.
                 </p>
               </div>
               <div class="tag-row" aria-label="Technical stack">
                 <span>gem5</span>
-                <span>SystemVerilog</span>
-                <span>ARM64</span>
-                <span>Security framing</span>
+                <span>ARM / AArch64</span>
+                <span>SystemVerilog / SVA</span>
+                <span>Vivado</span>
               </div>
               <div class="artifact-links">
-                <a href="assets/docs/copper-conference-draft-review.pdf">Review PDF</a>
+                <a href="assets/docs/copper-research-draft-review.pdf">Research review PDF</a>
+                <a href="assets/img/copper-review.jpg">Preview image</a>
               </div>
               <p class="evidence-note">
-                The contact-sheet image is available in the repository but is intentionally not emphasized because
-                the text is too small to read at portfolio scale.
+                Current status: full draft/review evidence in PDF form. It is not presented
+                as published, production-integrated, or independently validated.
               </p>
             </div>
-            <aside class="artifact-panel" aria-label="COPPER artifact">
-              <p class="artifact-label">Evidence</p>
-              <p>Conference-draft review PDF included. Image contact sheet de-emphasized for readability.</p>
-            </aside>
+            <figure class="case-media artifact-frame wide">
+              <img
+                src="assets/img/copper-review.jpg"
+                width="1200"
+                height="808"
+                alt="COPPER-LINE research-draft contact-sheet preview for pointer-provenance prefetching."
+                loading="lazy"
+              >
+              <figcaption>Preview image; the PDF is the readable evidence source.</figcaption>
+            </figure>
+          </article>
+
+          <article class="case-study">
+            <div class="case-meta">
+              <span>Research / public Europa context</span>
+              <strong>Visualization</strong>
+            </div>
+            <div class="case-body">
+              <p class="case-category">Planetary radar interpretation / confidence modeling</p>
+              <h3>Europa radar confidence dashboard</h3>
+              <p class="case-outcome">
+                Dashboard-style research exercise for comparing ocean-boundary confidence
+                across dirty-ice, briny, clutter, and band-depth scenarios.
+              </p>
+              <div class="case-detail">
+                <h4>Tyler contributed</h4>
+                <p>
+                  Prepared the public dashboard export and confidence-layer framing shown in
+                  the portfolio image. The underlying workbook, model source, and reproduction
+                  notes are not currently included in the repository.
+                </p>
+              </div>
+              <div class="tag-row" aria-label="Technical stack">
+                <span>Radar confidence framing</span>
+                <span>Scenario comparison</span>
+                <span>Dashboard visualization</span>
+                <span>Exported evidence</span>
+              </div>
+              <div class="artifact-links">
+                <a href="assets/img/europa-dashboard.png">Dashboard image</a>
+              </div>
+              <p class="evidence-note">
+                Current status: portfolio visualization. This is not NASA-affiliated, is not
+                based on real spacecraft observations, and should not be treated as an operational science result.
+              </p>
+            </div>
+            <figure class="case-media artifact-frame wide">
+              <img
+                src="assets/img/europa-dashboard.png"
+                width="1883"
+                height="1210"
+                alt="Europa radar confidence dashboard showing scenario tables and confidence-layer outputs."
+                loading="lazy"
+              >
+              <figcaption>Dashboard export for a synthetic confidence-modeling exercise.</figcaption>
+            </figure>
+          </article>
+
+          <article class="case-study case-study-lower-evidence">
+            <div class="case-meta">
+              <span>Software / reliability exploration</span>
+              <strong>Plot only</strong>
+            </div>
+            <div class="case-body">
+              <p class="case-category">Fault detection / speculative decoding</p>
+              <h3>SDC-Spec exploratory coverage plot</h3>
+              <p class="case-outcome">
+                Early reliability-modeling concept for comparing speculative-decoding fault
+                catch rate, blind spots, and overall coverage as baseline acceptance changes.
+              </p>
+              <div class="case-detail">
+                <h4>Current evidence</h4>
+                <p>
+                  The public repository currently includes only the coverage plot and project
+                  framing. Source code, formula notes, axis definitions, and reproduction steps
+                  should be added before this is called runnable methodology or a benchmark.
+                </p>
+              </div>
+              <div class="tag-row" aria-label="Technical stack">
+                <span>Coverage modeling</span>
+                <span>Fault-detection framing</span>
+                <span>Data visualization</span>
+                <span>Method pending</span>
+              </div>
+              <div class="artifact-links">
+                <a href="assets/img/sdc-coverage.png">View coverage plot</a>
+              </div>
+              <p class="evidence-note warning-note">
+                Current status: concept evidence only. The formula and axis labeling need source
+                verification before using this as a quantitative result.
+              </p>
+            </div>
+            <figure class="case-media artifact-frame wide warning-frame">
+              <img
+                src="assets/img/sdc-coverage.png"
+                width="1100"
+                height="720"
+                alt="SDC-Spec exploratory coverage plot with validation status marked as method pending."
+                loading="lazy"
+              >
+              <figcaption>Exploratory coverage plot; method details are still pending.</figcaption>
+            </figure>
           </article>
         </div>
-
-        <!-- TODO: Add verified hardware project cards when source details are ready:
-             water-level/drain control system, portable battery/power system,
-             FPGA/VHDL digital logic projects, and robotics/VEX design work. -->
       </section>
 
-      <section class="section" id="experience" aria-labelledby="experience-title">
-        <div class="section-marker">
-          <span>03</span>
-          <p>Experience</p>
-        </div>
-
+      <section class="section focus-section" id="education" aria-labelledby="education-title">
         <div class="section-heading">
-          <h2 id="experience-title">Current focus.</h2>
+          <p class="section-label">Education and direction</p>
+          <h2 id="education-title">Electrical Engineering student focused on hardware systems.</h2>
           <p>
-            Resume details are being finalized. This section only lists verified portfolio-level focus areas until
-            a resume PDF or role history is added.
+            The repository does not currently include a school name, graduation date, resume,
+            email, LinkedIn URL, or location, so those facts are intentionally left pending.
           </p>
         </div>
 
-        <div class="timeline">
-          <article class="timeline-entry">
-            <div class="timeline-date">Current</div>
-            <div>
-              <h3>Electrical Engineering Student</h3>
-              <p class="timeline-org">Hardware-focused project and research portfolio</p>
-              <ul>
-                <li>Builds and documents technical projects across embedded systems, FPGA/digital design, robotics, and hardware systems.</li>
-                <li>Uses simulation, reproducible artifacts, and explicit evidence boundaries to keep technical claims reviewable.</li>
-                <li>Seeking internship and research opportunities in hardware, embedded systems, FPGA, robotics, and related engineering work.</li>
-              </ul>
-            </div>
+        <div class="focus-grid">
+          <article>
+            <h3>Electrical / Computer Engineering portfolio</h3>
+            <p class="timeline-org">Hardware, FPGA/RTL, embedded systems, robotics, and research</p>
+            <ul>
+              <li>Builds FPGA/HLS research work with reference models, deterministic test vectors, and simulation-scoped validation notes.</li>
+              <li>Documents architecture and hardware/software integration work with clear evidence boundaries.</li>
+              <li>Targets internships and research opportunities in hardware, embedded systems, FPGA/RTL, robotics, and related engineering work.</li>
+            </ul>
           </article>
+          <aside class="focus-note" aria-label="Education details">
+            <p class="artifact-label">Recruiter basics</p>
+            <dl>
+              <div>
+                <dt>Education</dt>
+                <dd>School pending verification</dd>
+              </div>
+              <div>
+                <dt>Expected graduation</dt>
+                <dd>Date pending verification</dd>
+              </div>
+              <div>
+                <dt>Location</dt>
+                <dd>Pending publish-ready detail</dd>
+              </div>
+            </dl>
+          </aside>
         </div>
-
-        <!-- TODO: Add verified role entries with organization, dates, tools, and 2-3 bullets once Tyler's resume details are ready. -->
       </section>
 
       <section class="section" id="skills" aria-labelledby="skills-title">
-        <div class="section-marker">
-          <span>04</span>
-          <p>Skills</p>
-        </div>
-
         <div class="section-heading">
-          <h2 id="skills-title">Technical inventory.</h2>
-          <p>Grouped for quick recruiter scanning, using only tools and areas already supported by this portfolio.</p>
+          <p class="section-label">Technical skills</p>
+          <h2 id="skills-title">Skills grouped for engineering review.</h2>
+          <p>
+            Project links show the strongest public evidence currently in this repository;
+            additional resume-level details can be added when Tyler provides a resume PDF.
+          </p>
         </div>
 
         <div class="skills-grid">
+          <section aria-labelledby="skills-rtl">
+            <h3 id="skills-rtl">FPGA / RTL</h3>
+            <p>Vitis HLS, Vivado, SystemVerilog / SVA, RTL cosimulation, datapath review</p>
+          </section>
+          <section aria-labelledby="skills-embedded">
+            <h3 id="skills-embedded">Embedded / hardware</h3>
+            <p>Digital logic, embedded-systems direction, hardware troubleshooting, robotics direction</p>
+          </section>
           <section aria-labelledby="skills-programming">
             <h3 id="skills-programming">Programming</h3>
-            <p>C++, Python, MATLAB</p>
-          </section>
-          <section aria-labelledby="skills-hardware">
-            <h3 id="skills-hardware">Hardware</h3>
-            <p>Digital logic, microcontrollers, semiconductor devices, embedded systems, FPGA</p>
+            <p>C++, Python, reference modeling, deterministic test vectors</p>
           </section>
           <section aria-labelledby="skills-tools">
             <h3 id="skills-tools">Tools</h3>
-            <p>GitHub, Vivado, KiCad, CAD</p>
+            <p>GitHub, technical documentation, dashboard/report preparation</p>
           </section>
           <section aria-labelledby="skills-research">
-            <h3 id="skills-research">Research</h3>
-            <p>Technical writing, simulation, data review, reproducibility checks</p>
-          </section>
-          <section aria-labelledby="skills-lab">
-            <h3 id="skills-lab">Communication / Lab</h3>
-            <p>Hardware troubleshooting, documentation, testing</p>
+            <h3 id="skills-research">Research practice</h3>
+            <p>Literature review, simulation framing, evidence boundaries, reproducibility checks</p>
           </section>
         </div>
       </section>
 
       <section class="section contact-section" id="contact" aria-labelledby="contact-title">
-        <div class="section-marker">
-          <span>05</span>
-          <p>Contact</p>
-        </div>
-
         <div class="contact-panel">
           <div>
-            <h2 id="contact-title">Open to hardware, embedded systems, FPGA, robotics, and research internship opportunities.</h2>
+            <p class="section-label">Contact</p>
+            <h2 id="contact-title">
+              Open to hardware, embedded systems, FPGA/RTL, robotics, and research internships.
+            </h2>
             <p>
-              The fastest verified public link right now is GitHub. Direct email, LinkedIn, location, and resume PDF
-              will be added when Tyler provides publish-ready details.
+              GitHub is the verified public contact path currently available in this repository.
+              Direct email, LinkedIn, location, education details, and a resume PDF should be
+              added when Tyler is ready to publish them.
             </p>
+            <div class="hero-actions" aria-label="Contact actions">
+              <a class="button button-primary" href="https://github.com/Tylerlee102">Open GitHub</a>
+              <a class="button button-secondary" href="#projects">Review projects</a>
+            </div>
           </div>
           <dl>
             <div>
@@ -388,24 +406,29 @@
               <dd><a href="https://github.com/Tylerlee102">github.com/Tylerlee102</a></dd>
             </div>
             <div>
-              <dt>Resume</dt>
-              <dd>Coming soon</dd>
+              <dt>Email</dt>
+              <dd>Email pending</dd>
             </div>
             <div>
-              <dt>Contact</dt>
-              <dd>Contact details available on request</dd>
+              <dt>LinkedIn</dt>
+              <dd>LinkedIn link pending</dd>
+            </div>
+            <div>
+              <dt>Resume</dt>
+              <dd>Resume PDF pending</dd>
             </div>
           </dl>
-          <!-- TODO: Add verified email mailto link. -->
-          <!-- TODO: Add verified LinkedIn URL. -->
-          <!-- TODO: Add intentional location only if Tyler wants it public. -->
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <p>Copyright 2026 Tyler Lee.</p>
-      <a href="#top">Back to top</a>
+      <nav aria-label="Footer navigation">
+        <a href="https://github.com/Tylerlee102">GitHub</a>
+        <a href="#contact">Contact</a>
+        <a href="#top">Back to top</a>
+      </nav>
     </footer>
   </body>
 </html>

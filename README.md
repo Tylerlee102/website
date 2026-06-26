@@ -1,6 +1,6 @@
 # Tyler Lee Electrical Engineering Portfolio
 
-Static GitHub Pages portfolio for Tyler Lee, focused on embedded systems, FPGA and digital design, robotics, hardware systems, and evidence-backed engineering research artifacts.
+Static GitHub Pages portfolio for Tyler Lee, focused on embedded systems, FPGA and digital design, robotics, hardware systems, and evidence-backed engineering research.
 
 Live site:
 
@@ -27,10 +27,10 @@ Put downloadable documents in `assets/docs/`.
 
 - `resume.pdf` for the resume button
 - `mxfp4-gdn-draft.pdf` for the MXFP4 research section
-- `copper-conference-draft-review.pdf` for the COPPER case study
+- `copper-research-draft-review.pdf` for the COPPER case study
 - Future project reports or one-page PDFs
 
-After adding `assets/docs/resume.pdf`, update the navigation and hero resume buttons in `index.html` to link directly to it.
+After adding `assets/docs/resume.pdf`, add or update resume links in `index.html`.
 
 ## Images
 
