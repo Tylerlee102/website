@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta
       name="description"
-      content="Tyler Lee's electrical and computer engineering portfolio for FPGA/RTL, embedded systems, hardware, robotics, and engineering research opportunities."
+      content="Tyler Lee's Electrical / Computer Engineering portfolio for FPGA/RTL, embedded systems, hardware, robotics, and engineering research opportunities."
     >
     <meta name="author" content="Tyler Lee">
-    <meta property="og:title" content="Tyler Lee | Electrical and Computer Engineering Portfolio">
+    <meta property="og:title" content="Tyler Lee | Electrical / Computer Engineering Portfolio">
     <meta
       property="og:description"
-      content="Evidence-backed engineering portfolio with FPGA/RTL, embedded systems, hardware, robotics, and research project artifacts."
+      content="Engineering portfolio with FPGA/HLS research, computer architecture review work, and recruiter-ready project evidence."
     >
     <meta property="og:type" content="website">
-    <title>Tyler Lee | Electrical and Computer Engineering Portfolio</title>
+    <title>Tyler Lee | Electrical / Computer Engineering Portfolio</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="assets/css/styles.css">
   </head>
   <body>
@@ -27,11 +28,11 @@
           <small>EE / Computer Engineering</small>
         </a>
         <div class="nav-links">
-          <a href="#research">Research</a>
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
           <a href="#contact">Contact</a>
-          <a href="https://github.com/Tylerlee102">GitHub</a>
+          <a class="nav-github" href="https://github.com/Tylerlee102">GitHub</a>
         </div>
       </nav>
     </header>
@@ -43,122 +44,63 @@
             <p class="hero-label">Electrical / Computer Engineering portfolio</p>
             <h1 id="hero-title">Tyler Lee</h1>
             <p class="hero-title">
-              Electrical / Computer Engineering student focused on FPGA/RTL,
-              embedded systems, hardware, robotics, and engineering research.
+              FPGA/RTL and hardware-centered engineering portfolio for HLS/C++,
+              digital systems, embedded direction, robotics, and research work.
             </p>
+            <div class="focus-chips hero-focus-chips" aria-label="Technical focus areas">
+              <span>FPGA / RTL</span>
+              <span>Embedded systems</span>
+              <span>Hardware engineering</span>
+              <span>Robotics</span>
+              <span>Research projects</span>
+            </div>
             <p class="hero-lede">
-              Tyler builds hardware-centered project work with public artifacts framed
-              around what is currently available in this repository.
+              Tyler's strongest public work is an MXFP4 Gated DeltaNet FPGA/HLS
+              draft and a COPPER-LINE computer architecture review. He is
+              targeting FPGA/RTL, embedded systems, hardware, robotics-adjacent,
+              and research internship opportunities.
             </p>
             <div class="hero-actions" aria-label="Primary actions">
-              <a class="button button-primary" href="#projects">View project work</a>
-              <a class="button button-secondary" href="https://github.com/Tylerlee102">View GitHub profile</a>
+              <a class="button button-primary" href="#projects">View projects</a>
+              <a class="button button-secondary" href="https://github.com/Tylerlee102">Open GitHub</a>
             </div>
           </div>
 
           <aside class="hero-panel" aria-label="Recruiter snapshot">
-            <h2>Recruiter snapshot</h2>
-            <dl>
+            <div class="panel-heading">
+              <p class="panel-kicker">Recruiter snapshot</p>
+              <h2>Hardware-focused portfolio</h2>
+            </div>
+            <dl class="snapshot-grid">
               <div>
                 <dt>Target roles</dt>
-                <dd>FPGA/RTL and embedded systems internships, with hardware, robotics, and research adjacent work</dd>
+                <dd>FPGA/RTL, embedded systems, hardware, robotics, and research internships</dd>
               </div>
               <div>
-                <dt>Public artifacts</dt>
-                <dd>MXFP4 FPGA draft, datapath diagram, and COPPER-LINE review PDF</dd>
+                <dt>Strongest evidence</dt>
+                <dd>MXFP4 FPGA/HLS draft, datapath diagram, and COPPER-LINE review PDF</dd>
               </div>
               <div>
-                <dt>Verified public link</dt>
-                <dd><a href="https://github.com/Tylerlee102">GitHub profile</a></dd>
+                <dt>Verified profile</dt>
+                <dd><a href="https://github.com/Tylerlee102">github.com/Tylerlee102</a></dd>
               </div>
               <div>
-                <dt>Resume</dt>
-                <dd>Not published yet</dd>
+                <dt>Contact path</dt>
+                <dd>GitHub is the verified public profile currently available.</dd>
               </div>
             </dl>
           </aside>
         </div>
-      </section>
-
-      <section class="section research-section" id="research" aria-labelledby="research-title">
-        <div class="section-heading">
-          <p class="section-label">Featured FPGA / RTL work</p>
-          <h2 id="research-title">Native MXFP4 Gated DeltaNet decode research draft.</h2>
-          <p>
-            An FPGA-oriented research prototype for one Gated DeltaNet decode layer, focused
-            on persistent on-chip state and native MXFP4 arithmetic.
-          </p>
-        </div>
-
-        <article class="research-feature">
-          <div class="research-copy">
-            <p class="research-lede">
-              The public evidence includes a draft PDF and datapath diagram. The draft presents
-              MXFP4 datapath design notes, HLS/cosimulation/Vivado notes, and clearly marked
-              validation limits. It does not claim production hardware, publication, or external
-              model-quality validation.
-            </p>
-
-            <div class="research-grid" aria-label="Research summary">
-              <div>
-                <h3>What it is</h3>
-                <p>
-                  A simulation-framed FPGA research prototype studying native MXFP4 arithmetic
-                  inside a stateful Gated DeltaNet decode path.
-                </p>
-              </div>
-              <div>
-                <h3>Artifact covers</h3>
-                <p>
-                  Datapath documentation, implementation notes, synthetic checks, and a draft
-                  report with explicit evidence boundaries.
-                </p>
-              </div>
-              <div>
-                <h3>Current status</h3>
-                <p>
-                  Research draft/prototype. Realistic activation capture and model-quality
-                  validation remain future work.
-                </p>
-              </div>
-            </div>
-
-            <div class="research-actions">
-              <a class="button button-primary" href="assets/docs/mxfp4-gdn-draft.pdf">Read draft PDF</a>
-              <a class="button button-secondary" href="assets/img/mxfp4-gdn-datapath.png">Open datapath</a>
-            </div>
-          </div>
-
-          <aside class="research-meta" aria-label="Research metadata">
-            <dl>
-              <div>
-                <dt>Technologies</dt>
-                <dd>Vitis HLS, C++, Vivado, RTL cosimulation, MXFP4 E2M1/E8M0</dd>
-              </div>
-              <div>
-                <dt>Public links</dt>
-                <dd>
-                  <a href="assets/docs/mxfp4-gdn-draft.pdf">Draft PDF</a>
-                  and
-                  <a href="assets/img/mxfp4-gdn-datapath.png">datapath diagram</a>
-                </dd>
-              </div>
-              <div>
-                <dt>Boundary</dt>
-                <dd>Simulation evidence only; no external model-quality claims</dd>
-              </div>
-            </dl>
-          </aside>
-        </article>
       </section>
 
       <section class="section" id="projects" aria-labelledby="projects-title">
         <div class="section-heading">
-          <h2 id="projects-title">Project work with public artifacts.</h2>
+          <p class="section-label">Selected engineering projects</p>
+          <h2 id="projects-title">Project work with clear evidence.</h2>
           <p>
-            This section only includes work with a readable public artifact in the repository.
-            Items represented only by screenshots or plots are held back until source notes
-            or methodology files are published.
+            Two current projects are backed by public PDFs and images. Each
+            card states what Tyler worked on, which tools appear in the draft,
+            and what remains draft-status.
           </p>
         </div>
 
@@ -169,33 +111,89 @@
               <strong>Research draft</strong>
             </div>
             <div class="case-body">
-              <p class="case-category">Prefetching / provenance / RTL review</p>
-              <h3>COPPER-LINE committed pointer-provenance prefetching</h3>
+              <p class="case-category">FPGA/HLS / low-precision datapath / decode acceleration</p>
+              <h3>Native MXFP4 Gated DeltaNet decode on FPGA</h3>
               <p class="case-outcome">
-                Research draft exploring committed pointer provenance as a safety rule for
-                data-memory-dependent prefetching.
+                FPGA-oriented research draft for one Gated DeltaNet decode layer,
+                focused on persistent on-chip state and native MXFP4 arithmetic.
               </p>
-              <div class="case-detail">
-                <h4>Artifact covers</h4>
-                <p>
-                  The included draft/review covers the mechanism, AArch64 workload framing,
-                  RTL discussion, review notes, and security/prior-art positioning.
-                </p>
-              </div>
+
+              <dl class="project-facts">
+                <div>
+                  <dt>Built / documented</dt>
+                  <dd>Native E2M1/MXFP4 datapath notes, persistent-state kernel structure, deterministic reference checks, and a draft report.</dd>
+                </div>
+                <div>
+                  <dt>Tools</dt>
+                  <dd>Vitis HLS, C++, Vivado, RTL cosimulation, MXFP4 E2M1/E8M0, FPGA datapath design.</dd>
+                </div>
+                <div>
+                  <dt>Status</dt>
+                  <dd>Draft/prototype. Synthetic checks are included; real Qwen activation capture, external model-quality validation, raw source, and reproducible result files are not included here.</dd>
+                </div>
+              </dl>
+
               <div class="tag-row" aria-label="Technical stack">
-                <span>AArch64 framing</span>
-                <span>RTL discussion</span>
-                <span>Review notes</span>
-                <span>Prior-art review</span>
+                <span>Vitis HLS</span>
+                <span>C++</span>
+                <span>Vivado</span>
+                <span>RTL cosimulation</span>
               </div>
               <div class="artifact-links">
-                <a href="assets/docs/copper-research-draft-review.pdf">Research review PDF</a>
-                <a href="assets/img/copper-review.jpg">Preview image</a>
+                <a href="assets/docs/mxfp4-gdn-draft.pdf">Read draft PDF</a>
+                <a href="assets/img/mxfp4-gdn-datapath.png">Open datapath</a>
               </div>
-              <p class="evidence-note">
-                Current status: draft/review PDF. It is not presented as published
-                or production-ready.
+            </div>
+            <figure class="case-media artifact-frame portrait">
+              <img
+                src="assets/img/mxfp4-gdn-datapath.png"
+                width="720"
+                height="940"
+                alt="Native MXFP4 Gated DeltaNet datapath diagram."
+              >
+              <figcaption>Datapath diagram for the MXFP4 draft.</figcaption>
+            </figure>
+          </article>
+
+          <article class="case-study">
+            <div class="case-meta">
+              <span>Computer architecture / RTL review</span>
+              <strong>Draft review</strong>
+            </div>
+            <div class="case-body">
+              <p class="case-category">Pointer provenance / prefetching / hardware security</p>
+              <h3>COPPER-LINE committed pointer-provenance prefetching</h3>
+              <p class="case-outcome">
+                Computer-architecture research review about restricting
+                data-memory-dependent prefetching to source words proven by
+                committed execution.
               </p>
+
+              <dl class="project-facts">
+                <div>
+                  <dt>Documented</dt>
+                  <dd>The review PDF covers the mechanism, ARM/AArch64 framing, gem5-style evaluation context, RTL discussion, and prior-art/security positioning.</dd>
+                </div>
+                <div>
+                  <dt>Tools</dt>
+                  <dd>ARM/AArch64 framing, gem5 context, SystemVerilog/SVA discussion, Vivado RTL evidence, prefetching research.</dd>
+                </div>
+                <div>
+                  <dt>Status</dt>
+                  <dd>Draft/review evidence in PDF form. Source code, raw traces, and reproduction scripts are not included here; it is not presented as peer-reviewed, production-integrated, or independently reproduced.</dd>
+                </div>
+              </dl>
+
+              <div class="tag-row" aria-label="Technical stack">
+                <span>ARM / AArch64</span>
+                <span>Prefetching</span>
+                <span>RTL discussion</span>
+                <span>Security review</span>
+              </div>
+              <div class="artifact-links">
+                <a href="assets/docs/copper-research-draft-review.pdf">Read review PDF</a>
+                <a href="assets/img/copper-review.jpg">Open preview</a>
+              </div>
             </div>
             <figure class="case-media artifact-frame wide">
               <img
@@ -203,88 +201,119 @@
                 width="1200"
                 height="808"
                 alt="COPPER-LINE research-draft contact-sheet preview for pointer-provenance prefetching."
-                loading="lazy"
               >
               <figcaption>Preview image; the PDF is the readable evidence source.</figcaption>
             </figure>
           </article>
-
-        </div>
-      </section>
-
-      <section class="section focus-section" id="education" aria-labelledby="education-title">
-        <div class="section-heading">
-          <h2 id="education-title">Electrical Engineering student focused on hardware systems.</h2>
-          <p>
-            Education and availability details are intentionally omitted until confirmed
-            for publication.
-          </p>
-        </div>
-
-        <div class="focus-grid">
-          <article>
-            <h3>Electrical / Computer Engineering portfolio</h3>
-            <p class="timeline-org">Hardware, FPGA/RTL, embedded systems, robotics, and research</p>
-            <ul>
-              <li>Builds FPGA/HLS research work with reference models, deterministic test vectors, and simulation-scoped validation notes.</li>
-              <li>Documents architecture and hardware/software integration work with clear evidence boundaries.</li>
-              <li>Targets internships and research opportunities in hardware, embedded systems, FPGA/RTL, robotics, and related engineering work.</li>
-            </ul>
-          </article>
-          <aside class="focus-note" aria-label="Public profile note">
-            <p class="artifact-label">Public profile note</p>
-            <p>
-              GitHub is the only verified public profile link in this repository today.
-              Resume, school, graduation date, location, email, and LinkedIn can be added
-              when Tyler provides publish-ready details.
-            </p>
-          </aside>
         </div>
       </section>
 
       <section class="section" id="skills" aria-labelledby="skills-title">
         <div class="section-heading">
-          <h2 id="skills-title">Project exposure and technical skills.</h2>
+          <p class="section-label">Technical skills</p>
+          <h2 id="skills-title">Evidence-backed skills and target directions.</h2>
           <p>
-            The strongest public artifacts currently support FPGA/HLS, RTL-oriented review,
-            C++ reference work, architecture research, and evidence-focused documentation.
+            The first group is directly supported by the public project files.
+            The second group reflects the roles and engineering areas Tyler is
+            targeting as resume details are added.
           </p>
         </div>
 
-        <div class="skills-grid">
+        <div class="skills-grid skills-grid-wide">
           <section aria-labelledby="skills-rtl">
-            <h3 id="skills-rtl">FPGA / RTL</h3>
-            <p>Vitis HLS, Vivado, RTL cosimulation, MXFP4 datapath review</p>
+            <h3 id="skills-rtl">FPGA / RTL evidence</h3>
+            <div class="skill-chips" aria-label="FPGA and RTL skills">
+              <span>Vitis HLS</span>
+              <span>Vivado</span>
+              <span>RTL cosimulation</span>
+              <span>Datapath review</span>
+              <span>SystemVerilog / SVA discussion</span>
+            </div>
           </section>
           <section aria-labelledby="skills-architecture">
-            <h3 id="skills-architecture">Architecture research</h3>
-            <p>AArch64 framing, prefetching review, RTL review notes, prior-art comparison</p>
+            <h3 id="skills-architecture">Architecture research evidence</h3>
+            <div class="skill-chips" aria-label="Architecture research skills">
+              <span>ARM / AArch64 framing</span>
+              <span>Prefetching review</span>
+              <span>Prior-art comparison</span>
+              <span>Security positioning</span>
+            </div>
           </section>
-          <section aria-labelledby="skills-research">
-            <h3 id="skills-research">Modeling / documentation</h3>
-            <p>C++, reference modeling, deterministic test vectors, technical documentation</p>
+          <section aria-labelledby="skills-programming">
+            <h3 id="skills-programming">Programming and documentation</h3>
+            <div class="skill-chips" aria-label="Programming and documentation skills">
+              <span>C++</span>
+              <span>Reference modeling</span>
+              <span>Deterministic test vectors</span>
+              <span>Technical writing</span>
+            </div>
           </section>
           <section aria-labelledby="skills-direction">
-            <h3 id="skills-direction">Target direction</h3>
-            <p>Embedded systems, hardware engineering, robotics, and research internships</p>
+            <h3 id="skills-direction">Target directions</h3>
+            <div class="skill-chips" aria-label="Target directions">
+              <span>Embedded systems</span>
+              <span>Hardware engineering</span>
+              <span>Robotics</span>
+              <span>Research internships</span>
+            </div>
           </section>
+        </div>
+      </section>
+
+      <section class="section focus-section" id="education" aria-labelledby="education-title">
+        <div class="section-heading">
+          <p class="section-label">Education</p>
+          <h2 id="education-title">Electrical / Computer Engineering focus.</h2>
+          <p>
+            School, graduation date, and location will appear here once Tyler
+            publishes a resume with those details.
+          </p>
+        </div>
+
+        <div class="focus-grid">
+          <article>
+            <h3>Current public positioning</h3>
+            <p class="timeline-org">FPGA/RTL, embedded systems, hardware, robotics, and research</p>
+            <ul>
+              <li>Builds and documents hardware-centered research projects with clear status and evidence links.</li>
+              <li>Targets internships and research opportunities in FPGA/RTL, embedded systems, hardware engineering, and robotics-adjacent work.</li>
+            </ul>
+          </article>
+          <aside class="focus-note" aria-label="Pending recruiter details">
+            <p class="artifact-label">Recruiter details to add</p>
+            <dl class="pending-list">
+              <div>
+                <dt>School</dt>
+                <dd>Pending verification</dd>
+              </div>
+              <div>
+                <dt>Expected graduation</dt>
+                <dd>Pending verification</dd>
+              </div>
+              <div>
+                <dt>Location</dt>
+                <dd>Pending publish-ready detail</dd>
+              </div>
+            </dl>
+          </aside>
         </div>
       </section>
 
       <section class="section contact-section" id="contact" aria-labelledby="contact-title">
         <div class="contact-panel">
           <div>
+            <p class="section-label">Contact</p>
             <h2 id="contact-title">
               Open to FPGA/RTL, embedded systems, hardware, robotics, and research internships.
             </h2>
             <p>
-              The only verified public contact path in this repository is GitHub.
-              Additional direct-contact and resume details can be added when they are ready
-              for publication.
+              GitHub is the verified public contact path currently available.
+              Direct email, LinkedIn, and resume links can be
+              added as soon as Tyler provides publish-ready details.
             </p>
             <div class="hero-actions" aria-label="Contact actions">
-              <a class="button button-primary" href="https://github.com/Tylerlee102">View GitHub profile</a>
-              <a class="button button-secondary" href="#projects">Review project work</a>
+              <a class="button button-primary" href="https://github.com/Tylerlee102">Open GitHub</a>
+              <a class="button button-secondary" href="#projects">Review projects</a>
             </div>
           </div>
           <dl>
@@ -293,8 +322,8 @@
               <dd><a href="https://github.com/Tylerlee102">github.com/Tylerlee102</a></dd>
             </div>
             <div>
-              <dt>Additional details</dt>
-              <dd>Email, LinkedIn, resume, education, and location are not published yet.</dd>
+              <dt>Resume</dt>
+              <dd>Resume PDF pending</dd>
             </div>
           </dl>
         </div>

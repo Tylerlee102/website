@@ -19,7 +19,7 @@ Update only verified information:
 - Project source repositories, demos, videos, reports, and reproduction notes
 - Education, experience, research roles, technical team work, and skills
 
-Public-facing placeholders should be removed before deployment. Use comments or "coming soon" language only when a fact is not ready for recruiters.
+Public-facing pending fields should be replaced before deployment when a fact is ready for recruiters.
 
 ## Documents
 
@@ -38,6 +38,7 @@ Put project images in `assets/img/`.
 
 Current assets:
 
+- `favicon.svg`
 - `mxfp4-gdn-datapath.png`
 - `copper-review.jpg`
 
