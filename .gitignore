@@ -3,6 +3,8 @@ Thumbs.db
 desktop.ini
 .vscode/
 .idea/
+node_modules/
+dist/
 
 # Local agent/skill installs
 .agents/

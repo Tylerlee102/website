@@ -1,6 +1,6 @@
 # Tyler Lee Electrical / Computer Engineering Portfolio
 
-Static GitHub Pages portfolio for Tyler Lee, focused on FPGA/RTL, embedded systems, digital design, hardware engineering, robotics, and computer architecture research.
+Vite + React GitHub Pages portfolio for Tyler Lee, focused on FPGA/RTL, embedded systems, digital design, hardware engineering, robotics, and computer architecture research.
 
 Live site:
 
@@ -18,6 +18,8 @@ Public-facing pages:
 - `project-copper-line.html` for the COPPER-LINE architecture case study
 - `about.html` for technical focus, skills, and resume notes
 - `contact.html` for GitHub/contact links
+- `src/data/portfolio.js` for verified portfolio content
+- `src/components/` for the React UI
 - `CONTENT_TODO.md` for missing details Tyler should provide
 
 ## Edit Content
@@ -33,18 +35,18 @@ Update the site only with details that are accurate and ready for recruiters.
 
 ## Documents
 
-Put downloadable documents in `assets/docs/`.
+Put downloadable documents in `public/assets/docs/`.
 
 - `resume.pdf` for the resume button
 - `mxfp4-gdn-draft.pdf` for the MXFP4 research section
 - `copper-research-draft-review.pdf` for the COPPER case study
 - Future project reports or one-page PDFs
 
-After adding `assets/docs/resume.pdf`, add or update resume links in `about.html` and `contact.html`.
+After adding `public/assets/docs/resume.pdf`, add verified resume links in `src/data/portfolio.js`.
 
 ## Images
 
-Put project images in `assets/img/`.
+Put project images in `public/assets/img/`.
 
 Current assets:
 
@@ -56,16 +58,18 @@ Use only real project images or diagrams. Do not add AI-generated images. Add `w
 
 ## Run Locally
 
-Serve the folder from the repo root:
+Install dependencies and run Vite:
 
 ```powershell
-python -m http.server 8000
+npm install
+npm run dev
 ```
 
-Open:
+Preview a production build:
 
-```text
-http://localhost:8000
+```powershell
+npm run build
+npm run preview
 ```
 
 ## Deploy
@@ -76,13 +80,9 @@ This repo deploys through GitHub Actions using `.github/workflows/pages.yml`.
 2. Confirm repository Settings -> Pages is set to GitHub Actions.
 3. Wait for the `Deploy static site to GitHub Pages` workflow to finish.
 
-The workflow stages:
+The workflow installs dependencies with `npm ci`, runs `npm run build`, and uploads `dist/`.
 
-- all root-level `.html` pages
-- `.nojekyll`
-- `assets/`
-
-Any future public file outside those paths must be added to the workflow before it will publish.
+Vite is configured with `base: "/website/"` so GitHub Pages asset paths resolve under the live repository path.
 
 ## Evidence Rules
 
