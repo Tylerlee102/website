@@ -18,44 +18,50 @@ export default function RecruiterSnapshot() {
             </p>
           </div>
           <div className="snapshot-grid">
-            <Card className="snapshot-card">
-              <CardHeader>
-                <Radar aria-hidden="true" strokeWidth={1.7} />
-                <CardTitle>Technical signal</CardTitle>
-              </CardHeader>
-              <CardContent>
-                FPGA/RTL, embedded systems, hardware engineering, robotics, and architecture research.
-              </CardContent>
-            </Card>
-            <Card className="snapshot-card">
-              <CardHeader>
-                <ScrollText aria-hidden="true" strokeWidth={1.7} />
-                <CardTitle>Review path</CardTitle>
-              </CardHeader>
-              <CardContent>
-                Case studies, linked PDFs, diagrams, public repositories, and status notes.
-              </CardContent>
-            </Card>
-            <Card className="snapshot-card">
-              <CardHeader>
-                <Code2 aria-hidden="true" strokeWidth={1.7} />
-                <CardTitle>Primary profile</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <GlassButton href={site.github} variant="secondary" icon={Code2}>
-                  GitHub
-                </GlassButton>
-              </CardContent>
-            </Card>
+            <Reveal variant="card">
+              <Card className="snapshot-card">
+                <CardHeader>
+                  <Radar aria-hidden="true" strokeWidth={1.7} />
+                  <CardTitle>Technical signal</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  FPGA/RTL, embedded systems, hardware engineering, robotics, and architecture research.
+                </CardContent>
+              </Card>
+            </Reveal>
+            <Reveal delay={0.05} variant="card">
+              <Card className="snapshot-card">
+                <CardHeader>
+                  <ScrollText aria-hidden="true" strokeWidth={1.7} />
+                  <CardTitle>Review path</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  Case studies, linked PDFs, diagrams, public repositories, and status notes.
+                </CardContent>
+              </Card>
+            </Reveal>
+            <Reveal delay={0.1} variant="card">
+              <Card className="snapshot-card">
+                <CardHeader>
+                  <Code2 aria-hidden="true" strokeWidth={1.7} />
+                  <CardTitle>Primary profile</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <GlassButton href={site.github} variant="secondary" icon={Code2}>
+                    GitHub
+                  </GlassButton>
+                </CardContent>
+              </Card>
+            </Reveal>
           </div>
           <dl className="review-notes">
-            {reviewNotes.map((note) => (
-              <div key={note.label}>
+            {reviewNotes.map((note, index) => (
+              <Reveal as="div" key={note.label} delay={index * 0.04} variant="card">
                 <dt>{note.label}</dt>
                 <dd>
                   {note.href ? <a href={note.href}>{note.value}</a> : note.value}
                 </dd>
-              </div>
+              </Reveal>
             ))}
           </dl>
         </LiquidGlassPanel>

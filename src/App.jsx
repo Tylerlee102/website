@@ -154,12 +154,14 @@ function ProjectsShowcase({ detailed = false }) {
 
       <BentoGrid className="project-bento">
         {caseStudies.map((project, index) => (
-          <div
+          <Reveal
             key={project.id}
             className={index === 0 || detailed ? "md:col-span-2" : "md:col-span-1"}
+            delay={index * 0.06}
+            variant="card"
           >
             <ProjectCard project={project} featured={index === 0 || detailed} />
-          </div>
+          </Reveal>
         ))}
       </BentoGrid>
     </section>
@@ -180,21 +182,27 @@ function RepositoryTrail({ detailed = false }) {
 
       <BentoGrid className={detailed ? "repo-bento repo-bento-detailed" : "repo-bento"}>
         {repositories.map((repo, index) => (
-          <BentoGridItem
+          <Reveal
             key={repo.title}
-            className={index === 0 || (detailed && index === 3) ? "repo-bento-item md:col-span-2" : "repo-bento-item"}
-            title={repo.title}
-            description={repo.summary}
-            icon={<Layers3 aria-hidden="true" strokeWidth={1.7} className="size-5" />}
-            header={
-              <div className="repo-header">
-                <GlassChip tone={index % 2 === 0 ? "cyan" : "violet"}>{repo.type}</GlassChip>
-                <a href={repo.href} aria-label={`Open ${repo.title}`} {...linkProps(repo.href)}>
-                  <ExternalLink aria-hidden="true" strokeWidth={1.8} />
-                </a>
-              </div>
-            }
-          />
+            className={index === 0 || (detailed && index === 3) ? "md:col-span-2" : undefined}
+            delay={index * 0.045}
+            variant="card"
+          >
+            <BentoGridItem
+              className="repo-bento-item"
+              title={repo.title}
+              description={repo.summary}
+              icon={<Layers3 aria-hidden="true" strokeWidth={1.7} className="size-5" />}
+              header={
+                <div className="repo-header">
+                  <GlassChip tone={index % 2 === 0 ? "cyan" : "violet"}>{repo.type}</GlassChip>
+                  <a href={repo.href} aria-label={`Open ${repo.title}`} {...linkProps(repo.href)}>
+                    <ExternalLink aria-hidden="true" strokeWidth={1.8} />
+                  </a>
+                </div>
+              }
+            />
+          </Reveal>
         ))}
       </BentoGrid>
     </section>

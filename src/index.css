@@ -157,6 +157,7 @@ a:hover {
 
 a,
 button {
+  touch-action: manipulation;
   transition:
     transform 190ms cubic-bezier(0.16, 1, 0.3, 1),
     border-color 190ms cubic-bezier(0.16, 1, 0.3, 1),
@@ -280,6 +281,10 @@ main,
 }
 
 .light-field {
+  --field-rotate: 0deg;
+  --field-drift-x: 1rem;
+  --field-drift-y: -0.7rem;
+  --field-opacity-to: 0.42;
   position: absolute;
   width: min(56rem, 90vw);
   height: min(30rem, 58vw);
@@ -290,24 +295,43 @@ main,
     radial-gradient(ellipse at 80% 74%, rgba(191, 90, 242, 0.08), transparent 42%);
   filter: blur(18px);
   opacity: 0.34;
+  transform: translate3d(0, 0, 0) rotate(var(--field-rotate));
+  animation: ambient-drift 18s ease-in-out infinite alternate;
+  will-change: transform, opacity;
 }
 
 .light-field-a {
+  --field-rotate: -12deg;
+  --field-drift-x: 1.2rem;
+  --field-drift-y: -0.8rem;
   top: 10%;
   right: -14%;
-  transform: rotate(-12deg);
 }
 
 .light-field-b {
+  --field-rotate: 14deg;
+  --field-drift-x: -1rem;
+  --field-drift-y: 0.7rem;
+  --field-opacity-to: 0.32;
   left: -18%;
   bottom: 2%;
-  transform: rotate(14deg);
+  animation-duration: 22s;
+  animation-direction: alternate-reverse;
   opacity: 0.24;
 }
 
 .noise-layer {
   opacity: 0.08;
   mix-blend-mode: screen;
+}
+
+@keyframes ambient-drift {
+  100% {
+    opacity: var(--field-opacity-to);
+    transform:
+      translate3d(var(--field-drift-x), var(--field-drift-y), 0)
+      rotate(calc(var(--field-rotate) + 1.5deg));
+  }
 }
 
 .site-header {
@@ -334,6 +358,8 @@ main,
   display: grid;
   flex: 0 0 auto;
   gap: 0.1rem;
+  min-height: 2.75rem;
+  align-content: center;
   text-decoration: none;
 }
 
@@ -401,6 +427,8 @@ dt {
 
 .icon-glass-button,
 .mobile-menu-trigger {
+  min-width: 2.875rem;
+  min-height: 2.875rem;
   border: 1px solid rgba(203, 213, 225, 0.2);
   border-radius: 999px;
   background: rgba(203, 213, 225, 0.1);
@@ -417,6 +445,7 @@ dt {
     linear-gradient(145deg, rgba(248, 250, 252, 0.11), rgba(203, 213, 225, 0.04)),
     rgba(11, 16, 32, 0.96);
   backdrop-filter: blur(18px) saturate(150%);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
 }
 
 .mobile-nav-list {
@@ -443,6 +472,8 @@ dt {
     linear-gradient(145deg, rgba(248, 250, 252, 0.42), rgba(100, 210, 255, 0.26) 32%, rgba(191, 90, 242, 0.14) 64%, rgba(5, 7, 13, 0.58)) border-box;
   background-color: var(--glass-fill);
   box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(16px) saturate(145%);
+  -webkit-backdrop-filter: blur(16px) saturate(145%);
   max-width: 100%;
   min-width: 0;
 }
@@ -928,6 +959,11 @@ dt {
   background: rgba(17, 24, 39, 0.72);
   color: var(--text-main);
   font-weight: 720;
+  transition:
+    transform 190ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 190ms cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 190ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 190ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .preview-button:hover {
@@ -973,6 +1009,7 @@ dt {
   color: var(--text-main);
   box-shadow: var(--glass-shadow);
   backdrop-filter: blur(18px) saturate(150%);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
 }
 
 .repo-bento-item:hover {
@@ -1001,8 +1038,8 @@ dt {
 }
 
 .repo-header a {
-  width: 2.45rem;
-  height: 2.45rem;
+  width: 2.875rem;
+  height: 2.875rem;
   border: 1px solid rgba(203, 213, 225, 0.22);
   border-radius: 999px;
   display: grid;
@@ -1031,6 +1068,8 @@ dt {
   border: 1px solid rgba(203, 213, 225, 0.18);
   background: rgba(17, 24, 39, 0.68);
   color: var(--text-main);
+  backdrop-filter: blur(12px) saturate(130%);
+  -webkit-backdrop-filter: blur(12px) saturate(130%);
 }
 
 .snapshot-card svg {
@@ -1067,6 +1106,12 @@ dt {
 
 dd {
   color: var(--text-secondary);
+}
+
+.review-notes a {
+  min-height: 2.875rem;
+  display: inline-flex;
+  align-items: center;
 }
 
 .skills-grid {
@@ -1108,6 +1153,8 @@ dd {
   align-content: start;
   padding: 1rem;
   background: rgba(17, 24, 39, 0.68);
+  backdrop-filter: blur(12px) saturate(130%);
+  -webkit-backdrop-filter: blur(12px) saturate(130%);
 }
 
 .contact-card.is-featured {
@@ -1199,7 +1246,7 @@ dd {
 }
 
 .case-tabs-list button {
-  min-height: 2.25rem;
+  min-height: 2.75rem;
   border-radius: 999px;
   padding-inline: 0.85rem;
 }
@@ -1280,6 +1327,7 @@ dd {
 }
 
 .site-footer a {
+  min-height: 2.75rem;
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
@@ -1294,6 +1342,31 @@ dd {
       0 38px 92px rgba(0, 0, 0, 0.48),
       0 20px 58px rgba(10, 132, 255, 0.2),
       inset 0 1px 0 rgba(248, 250, 252, 0.26);
+  }
+}
+
+@media (hover: none) {
+  .glass-button:active,
+  .preview-button:active,
+  .mobile-nav-list a:active,
+  .repo-header a:active {
+    transform: translateY(1px) scale(0.985);
+  }
+
+  .project-card:active,
+  .skill-card:active,
+  .snapshot-card:active,
+  .contact-card:active,
+  .repo-bento-item:active {
+    border-color: rgba(100, 210, 255, 0.44);
+    box-shadow:
+      0 18px 42px rgba(0, 0, 0, 0.4),
+      0 10px 30px rgba(10, 132, 255, 0.17),
+      inset 0 1px 0 rgba(248, 250, 252, 0.2);
+  }
+
+  .project-card:active .project-media img {
+    transform: scale(1.01);
   }
 }
 
@@ -1341,7 +1414,8 @@ dd {
   }
 
   .site-header {
-    position: static;
+    top: max(0.45rem, env(safe-area-inset-top));
+    padding-block: 0.55rem;
   }
 
   .nav-links,
@@ -1354,7 +1428,7 @@ dd {
   }
 
   .nav-shell .liquid-content {
-    min-height: 3.75rem;
+    min-height: 3.65rem;
   }
 
   .hero-grid,
@@ -1364,26 +1438,44 @@ dd {
 
   .hero-dashboard {
     min-height: auto;
+    display: grid;
+    perspective: 1000px;
   }
 
   .dashboard-device {
-    transform: none;
+    transform: rotateX(1.2deg) rotateY(-2.2deg);
   }
 
   .liquid-panel {
     background-color: var(--glass-fill-strong);
+    box-shadow:
+      0 24px 62px rgba(0, 0, 0, 0.44),
+      0 14px 38px rgba(10, 132, 255, 0.16),
+      inset 0 1px 0 rgba(248, 250, 252, 0.24);
   }
 
   .liquid-panel::before {
-    opacity: 0.42;
+    opacity: 0.48;
   }
 
   .floating-mini-card {
     position: relative;
     inset: auto;
-    width: 100%;
-    margin-top: 0.8rem;
-    transform: none;
+    width: min(92%, 20rem);
+    margin-top: -0.25rem;
+    box-shadow:
+      0 18px 42px rgba(0, 0, 0, 0.38),
+      0 10px 28px rgba(100, 210, 255, 0.12);
+  }
+
+  .mini-card-a {
+    justify-self: end;
+    transform: rotate(2.2deg) translateY(-0.05rem);
+  }
+
+  .mini-card-b {
+    justify-self: start;
+    transform: rotate(-2.4deg) translateY(-0.15rem);
   }
 
   .snapshot-grid,
@@ -1407,6 +1499,7 @@ dd {
     max-width: none;
     font-size: clamp(2.7rem, 15vw, 3.65rem);
     line-height: 1;
+    text-shadow: 0 18px 48px rgba(10, 132, 255, 0.2);
   }
 
   h2 {
@@ -1414,19 +1507,50 @@ dd {
     font-size: clamp(2rem, 10vw, 2.75rem);
   }
 
-  .hero-section,
-  .page-intro,
+  .hero-section {
+    padding: 2.9rem 0 4.3rem;
+  }
+
+  .page-intro {
+    padding: 3.6rem 0 4.2rem;
+  }
+
   .section {
-    padding-block: 3.4rem;
+    padding: 4.05rem 0 4.55rem;
   }
 
   .aurora-layer {
     display: none;
   }
 
-  .light-field,
+  .grid-layer {
+    background-size: 46px 46px, 46px 46px, auto;
+    mask-image: linear-gradient(180deg, black 0%, rgba(0, 0, 0, 0.5) 58%, transparent 96%);
+  }
+
+  .light-field {
+    display: block;
+    width: 78vw;
+    height: 19rem;
+    border-color: rgba(203, 213, 225, 0.06);
+    filter: blur(14px);
+    opacity: 0.2;
+  }
+
+  .light-field-a {
+    top: 9%;
+    right: -42%;
+  }
+
+  .light-field-b {
+    bottom: 10%;
+    left: -46%;
+    opacity: 0.16;
+  }
+
   .noise-layer {
-    display: none;
+    display: block;
+    opacity: 0.045;
   }
 
   .case-main-wrap,
@@ -1441,8 +1565,8 @@ dd {
   }
 
   .hero-statement {
-    font-size: 1.12rem;
-    line-height: 1.42;
+    font-size: 1.14rem;
+    line-height: 1.4;
   }
 
   p,
@@ -1454,6 +1578,10 @@ dd {
 
   .section-heading {
     gap: 0.85rem;
+  }
+
+  .hero-copy {
+    gap: 0.92rem;
   }
 
   .action-row,
@@ -1501,13 +1629,64 @@ dd {
     min-height: 13rem;
   }
 
+  .dashboard-device {
+    --panel-padding: 0.72rem;
+    transform: rotateX(1deg) rotateY(-1.4deg);
+  }
+
+  .dashboard-topline,
+  .dashboard-artifact,
+  .dashboard-pipeline,
+  .dashboard-signals div {
+    transform: translateZ(18px);
+  }
+
+  .dashboard-topline {
+    min-height: 2.62rem;
+    border-radius: 16px;
+  }
+
+  .dashboard-artifact {
+    border-radius: 20px;
+  }
+
+  .dashboard-signals div {
+    background:
+      radial-gradient(circle at 20% 0%, rgba(100, 210, 255, 0.09), transparent 42%),
+      rgba(17, 24, 39, 0.72);
+    box-shadow:
+      inset 0 1px 0 rgba(248, 250, 252, 0.12),
+      0 12px 28px rgba(0, 0, 0, 0.22);
+  }
+
+  .project-tilt-shell > div {
+    transform: rotateX(0.8deg) rotateY(-1deg);
+  }
+
+  .project-card,
+  .skill-card,
+  .contact-panel,
+  .snapshot-panel,
+  .case-main-panel,
+  .case-sidebar {
+    box-shadow:
+      0 22px 54px rgba(0, 0, 0, 0.44),
+      0 12px 32px rgba(10, 132, 255, 0.13),
+      inset 0 1px 0 rgba(248, 250, 252, 0.22);
+  }
+
   .project-body,
   .contact-card,
   .snapshot-card,
   .review-notes div,
   .evidence-list div,
   .case-sidebar dl div {
-    background: rgba(17, 24, 39, 0.74);
+    background:
+      linear-gradient(145deg, rgba(248, 250, 252, 0.08), rgba(203, 213, 225, 0.035)),
+      rgba(17, 24, 39, 0.74);
+    box-shadow:
+      inset 0 1px 0 rgba(248, 250, 252, 0.11),
+      0 12px 28px rgba(0, 0, 0, 0.22);
   }
 
   .case-heading-row {
@@ -1535,6 +1714,8 @@ dd {
   .liquid-panel,
   .mobile-sheet,
   .repo-bento-item,
+  .snapshot-card,
+  .contact-card,
   .glass-button,
   .glass-chip {
     background: rgba(11, 16, 32, 0.96);
@@ -1545,6 +1726,8 @@ dd {
   .liquid-panel,
   .mobile-sheet,
   .repo-bento-item,
+  .snapshot-card,
+  .contact-card,
   .glass-button,
   .glass-chip {
     background: rgba(11, 16, 32, 0.97);

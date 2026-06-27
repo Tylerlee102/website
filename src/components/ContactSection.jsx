@@ -17,14 +17,20 @@ export default function ContactSection({ title = "Review the projects or reach T
             </p>
           </div>
           <div className="contact-grid">
-            {contactCards.map((card) => (
-              <article key={card.title} className={card.featured ? "contact-card is-featured" : "contact-card"}>
+            {contactCards.map((card, index) => (
+              <Reveal
+                as="article"
+                key={card.title}
+                className={card.featured ? "contact-card is-featured" : "contact-card"}
+                delay={index * 0.05}
+                variant="card"
+              >
                 <h3>{card.title}</h3>
                 <p>{card.body}</p>
                 <GlassButton href={card.href} variant={card.featured ? "primary" : "secondary"} icon={card.featured ? Code2 : undefined}>
                   {card.label}
                 </GlassButton>
-              </article>
+              </Reveal>
             ))}
           </div>
         </LiquidGlassPanel>

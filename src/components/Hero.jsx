@@ -9,30 +9,36 @@ export default function Hero() {
   return (
     <section className="hero-section" aria-labelledby="hero-title">
       <div className="hero-grid">
-        <Reveal className="hero-copy">
-          <p className="section-kicker">Hardware-focused engineering portfolio</p>
-          <h1 id="hero-title">Tyler Lee</h1>
-          <p className="hero-statement">{site.role}</p>
-          <div className="focus-chip-row" aria-label="Technical focus areas">
+        <div className="hero-copy">
+          <Reveal as="p" className="section-kicker" variant="hero">
+            Hardware-focused engineering portfolio
+          </Reveal>
+          <Reveal as="h1" id="hero-title" delay={0.04} variant="hero">
+            Tyler Lee
+          </Reveal>
+          <Reveal as="p" className="hero-statement" delay={0.08} variant="hero">
+            {site.role}
+          </Reveal>
+          <Reveal className="focus-chip-row" aria-label="Technical focus areas" delay={0.12} variant="hero">
             {focusAreas.map((area) => (
               <GlassChip key={area}>{area}</GlassChip>
             ))}
-          </div>
-          <p className="hero-lede">
+          </Reveal>
+          <Reveal as="p" className="hero-lede" delay={0.16} variant="hero">
             Selected work spans low-precision FPGA/HLS datapaths, architecture research reviews,
             embedded processor prototypes, and hardware documentation.
-          </p>
-          <div className="action-row" aria-label="Primary actions">
+          </Reveal>
+          <Reveal className="action-row" aria-label="Primary actions" delay={0.2} variant="hero">
             <GlassButton href="projects.html" icon={CircuitBoard}>
               View projects
             </GlassButton>
             <GlassButton href={site.github} variant="secondary" icon={Code2}>
               GitHub
             </GlassButton>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
 
-        <Reveal delay={0.08}>
+        <Reveal delay={0.1} variant="panel">
           <HeroDashboard />
         </Reveal>
       </div>

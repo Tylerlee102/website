@@ -23,7 +23,7 @@ export default function SkillsSection({ compact = false }) {
         {skillGroups.map((skill, index) => {
           const Icon = icons[index] || Cpu;
           return (
-            <Reveal key={skill.title} delay={index * 0.04}>
+            <Reveal key={skill.title} delay={index * 0.04} variant="card">
               <LiquidGlassPanel as="article" className="skill-card" radius={24}>
                 <Icon aria-hidden="true" strokeWidth={1.7} />
                 <h3>{skill.title}</h3>
