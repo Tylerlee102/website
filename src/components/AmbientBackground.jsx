@@ -64,10 +64,10 @@ export default function AmbientBackground() {
         <div className="aurora-layer">
           <Suspense fallback={null}>
             <Aurora
-              colorStops={["#05070d", "#0a84ff", "#64d2ff", "#bf5af2"]}
-              amplitude={0.28}
+              colorStops={["#05070d", "#0a84ff", "#64d2ff", "#bf5af2", "#ff4fd8", "#30d158"]}
+              amplitude={0.24}
               blend={0.44}
-              speed={0.18}
+              speed={0.16}
             />
           </Suspense>
         </div>

@@ -5,6 +5,15 @@ import Reveal from "@/components/Reveal";
 import { skillGroups, skillTags } from "@/data/portfolio";
 
 const icons = [Cpu, Layers3, PenTool, FileCode2];
+const skillTones = ["cyan", "mint", "violet", "rose"];
+
+const tagTone = (tag) => {
+  if (/arm|rv32|embedded|pipeline/i.test(tag)) return "mint";
+  if (/writing|architecture|review/i.test(tag)) return "violet";
+  if (/systemverilog|vitis|vivado|rtl|fpga|hls/i.test(tag)) return "cyan";
+  if (/python|c\+\+/i.test(tag)) return "rose";
+  return "slate";
+};
 
 export default function SkillsSection({ compact = false }) {
   return (
@@ -22,9 +31,10 @@ export default function SkillsSection({ compact = false }) {
       <div className="skills-grid">
         {skillGroups.map((skill, index) => {
           const Icon = icons[index] || Cpu;
+          const tone = skillTones[index] || "cyan";
           return (
             <Reveal key={skill.title} delay={index * 0.04} variant="card">
-              <LiquidGlassPanel as="article" className="skill-card" radius={24}>
+              <LiquidGlassPanel as="article" className={`skill-card skill-card-${tone}`} radius={24}>
                 <Icon aria-hidden="true" strokeWidth={1.7} />
                 <h3>{skill.title}</h3>
                 <p>{skill.body}</p>
@@ -37,7 +47,7 @@ export default function SkillsSection({ compact = false }) {
       <Reveal className="tag-cloud-wrap">
         <div className="chip-wrap large" aria-label="Skills and tools">
           {skillTags.map((tag) => (
-            <GlassChip key={tag}>{tag}</GlassChip>
+            <GlassChip key={tag} tone={tagTone(tag)}>{tag}</GlassChip>
           ))}
         </div>
       </Reveal>

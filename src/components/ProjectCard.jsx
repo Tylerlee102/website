@@ -14,6 +14,13 @@ import GlassChip from "@/components/GlassChip";
 import LiquidGlassPanel from "@/components/LiquidGlassPanel";
 import { sitePath } from "@/lib/routes";
 
+const techTone = (tech) => {
+  if (/arm|rv32|embedded|pipeline/i.test(tech)) return "mint";
+  if (/security|architecture|prefetch|review/i.test(tech)) return "violet";
+  if (/rtl|cosimulation|vivado|vitis|fpga|hls|mxfp/i.test(tech)) return "cyan";
+  return "slate";
+};
+
 export default function ProjectCard({ project, featured = false }) {
   return (
     <CardContainer containerClassName="project-tilt-shell" className="w-full">
@@ -21,7 +28,7 @@ export default function ProjectCard({ project, featured = false }) {
         <CardItem translateZ={featured ? 28 : 18} className="w-full">
           <LiquidGlassPanel
             as="article"
-            className={featured ? "project-card project-card-featured" : "project-card"}
+            className={featured ? `project-card project-card-${project.id} project-card-featured` : `project-card project-card-${project.id}`}
             radius={30}
             beam={featured}
             strong={featured}
@@ -48,7 +55,7 @@ export default function ProjectCard({ project, featured = false }) {
               <p>{project.summary}</p>
               <div className="chip-wrap" aria-label={`${project.shortTitle} technologies`}>
                 {project.tech.slice(0, 4).map((tech) => (
-                  <GlassChip key={tech} tone="slate">
+                  <GlassChip key={tech} tone={techTone(tech)}>
                     {tech}
                   </GlassChip>
                 ))}

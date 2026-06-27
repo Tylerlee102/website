@@ -6,10 +6,17 @@ import { caseStudies } from "@/data/portfolio";
 import { sitePath } from "@/lib/routes";
 
 const signals = [
-  { label: "FPGA / RTL", value: "Datapaths, HLS, RTL review, cosimulation", icon: Cpu },
-  { label: "Embedded", value: "Processor pipelines and hardware controls", icon: Radio },
-  { label: "Architecture", value: "Prefetching, provenance, replay capsules", icon: ShieldCheck },
-  { label: "Research", value: "Hardware reports and technical writeups", icon: FileText },
+  { label: "FPGA / RTL", value: "Datapaths, HLS, RTL review, cosimulation", icon: Cpu, tone: "cyan" },
+  { label: "Embedded", value: "Processor pipelines and hardware controls", icon: Radio, tone: "mint" },
+  { label: "Architecture", value: "Prefetching, provenance, replay capsules", icon: ShieldCheck, tone: "violet" },
+  { label: "Research", value: "Hardware reports and technical writeups", icon: FileText, tone: "rose" },
+];
+
+const pipeline = [
+  { label: "FPGA", tone: "cyan" },
+  { label: "RTL", tone: "cyan" },
+  { label: "HLS", tone: "violet" },
+  { label: "ARCH", tone: "rose" },
 ];
 
 export default function HeroDashboard() {
@@ -36,8 +43,8 @@ export default function HeroDashboard() {
           </a>
 
           <div className="dashboard-pipeline" aria-label="Technical focus pipeline">
-            {["FPGA", "RTL", "HLS", "ARCH"].map((item) => (
-              <GlassChip key={item}>{item}</GlassChip>
+            {pipeline.map((item) => (
+              <GlassChip key={item.label} tone={item.tone}>{item.label}</GlassChip>
             ))}
           </div>
 
@@ -45,7 +52,7 @@ export default function HeroDashboard() {
             {signals.map((signal) => {
               const Icon = signal.icon;
               return (
-                <div key={signal.label}>
+                <div key={signal.label} className={`dashboard-signal-${signal.tone}`}>
                   <Icon aria-hidden="true" strokeWidth={1.7} />
                   <strong>{signal.label}</strong>
                   <span>{signal.value}</span>

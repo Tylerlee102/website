@@ -19,7 +19,7 @@ export default function RecruiterSnapshot() {
           </div>
           <div className="snapshot-grid">
             <Reveal variant="card">
-              <Card className="snapshot-card">
+              <Card className="snapshot-card snapshot-card-cyan">
                 <CardHeader>
                   <Radar aria-hidden="true" strokeWidth={1.7} />
                   <CardTitle>Technical signal</CardTitle>
@@ -30,7 +30,7 @@ export default function RecruiterSnapshot() {
               </Card>
             </Reveal>
             <Reveal delay={0.05} variant="card">
-              <Card className="snapshot-card">
+              <Card className="snapshot-card snapshot-card-mint">
                 <CardHeader>
                   <ScrollText aria-hidden="true" strokeWidth={1.7} />
                   <CardTitle>Review path</CardTitle>
@@ -41,7 +41,7 @@ export default function RecruiterSnapshot() {
               </Card>
             </Reveal>
             <Reveal delay={0.1} variant="card">
-              <Card className="snapshot-card">
+              <Card className="snapshot-card snapshot-card-violet">
                 <CardHeader>
                   <Code2 aria-hidden="true" strokeWidth={1.7} />
                   <CardTitle>Primary profile</CardTitle>

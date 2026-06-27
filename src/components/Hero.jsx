@@ -5,6 +5,14 @@ import HeroDashboard from "@/components/HeroDashboard";
 import Reveal from "@/components/Reveal";
 import { focusAreas, site } from "@/data/portfolio";
 
+const focusTone = {
+  "FPGA / RTL": "cyan",
+  "Embedded systems": "mint",
+  "Hardware engineering": "cyan",
+  Robotics: "mint",
+  "Architecture research": "violet",
+};
+
 export default function Hero() {
   return (
     <section className="hero-section" aria-labelledby="hero-title">
@@ -21,7 +29,7 @@ export default function Hero() {
           </Reveal>
           <Reveal className="focus-chip-row" aria-label="Technical focus areas" delay={0.12} variant="hero">
             {focusAreas.map((area) => (
-              <GlassChip key={area}>{area}</GlassChip>
+              <GlassChip key={area} tone={focusTone[area] || "cyan"}>{area}</GlassChip>
             ))}
           </Reveal>
           <Reveal as="p" className="hero-lede" delay={0.16} variant="hero">

@@ -4,6 +4,8 @@ import LiquidGlassPanel from "@/components/LiquidGlassPanel";
 import Reveal from "@/components/Reveal";
 import { contactCards } from "@/data/portfolio";
 
+const contactTones = ["cyan", "violet", "rose"];
+
 export default function ContactSection({ title = "Review the projects or reach Tyler through GitHub." }) {
   return (
     <section className="section contact-section" aria-labelledby="contact-title">
@@ -21,7 +23,7 @@ export default function ContactSection({ title = "Review the projects or reach T
               <Reveal
                 as="article"
                 key={card.title}
-                className={card.featured ? "contact-card is-featured" : "contact-card"}
+                className={card.featured ? `contact-card contact-card-${contactTones[index]} is-featured` : `contact-card contact-card-${contactTones[index]}`}
                 delay={index * 0.05}
                 variant="card"
               >

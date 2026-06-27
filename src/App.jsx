@@ -40,11 +40,32 @@ const pageTitles = {
   copper: "COPPER-LINE Prefetching Research Review | Tyler Lee",
 };
 
+const repoToneSequence = ["cyan", "mint", "violet", "rose", "amber"];
+
 export default function App() {
   const currentPage = getCurrentPage();
 
   useEffect(() => {
     document.title = pageTitles[currentPage] || pageTitles.home;
+  }, [currentPage]);
+
+  useEffect(() => {
+    const resetPageScroll = () => {
+      if (!window.location.hash) {
+        window.scrollTo(0, 0);
+      }
+    };
+
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
+    resetPageScroll();
+    window.addEventListener("pageshow", resetPageScroll);
+
+    return () => {
+      window.removeEventListener("pageshow", resetPageScroll);
+    };
   }, [currentPage]);
 
   return (
@@ -189,13 +210,13 @@ function RepositoryTrail({ detailed = false }) {
             variant="card"
           >
             <BentoGridItem
-              className="repo-bento-item"
+              className={`repo-bento-item repo-bento-${repoToneSequence[index] || "cyan"}`}
               title={repo.title}
               description={repo.summary}
               icon={<Layers3 aria-hidden="true" strokeWidth={1.7} className="size-5" />}
               header={
                 <div className="repo-header">
-                  <GlassChip tone={index % 2 === 0 ? "cyan" : "violet"}>{repo.type}</GlassChip>
+                  <GlassChip tone={repoToneSequence[index] || "cyan"}>{repo.type}</GlassChip>
                   <a href={repo.href} aria-label={`Open ${repo.title}`} {...linkProps(repo.href)}>
                     <ExternalLink aria-hidden="true" strokeWidth={1.8} />
                   </a>
