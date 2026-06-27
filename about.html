@@ -1,136 +1,25 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta
       name="description"
       content="About Tyler Lee, an Electrical / Computer Engineering portfolio focused on FPGA, RTL, embedded systems, and architecture research."
-    >
-    <meta name="author" content="Tyler Lee">
-    <meta property="og:title" content="About | Tyler Lee">
+    />
+    <meta name="author" content="Tyler Lee" />
+    <meta property="og:title" content="About | Tyler Lee" />
     <meta
       property="og:description"
       content="Technical focus, skills, and resume notes for Tyler Lee's engineering portfolio."
-    >
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://tylerlee102.github.io/website/assets/img/mxfp4-gdn-datapath.png">
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://tylerlee102.github.io/website/assets/img/mxfp4-gdn-datapath.png" />
     <title>About | Tyler Lee</title>
-    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="assets/js/site.js" defer></script>
+    <link rel="icon" href="/website/assets/img/favicon.svg" type="image/svg+xml" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-
-    <header class="site-header">
-      <nav class="top-nav" aria-label="Primary navigation">
-        <a class="brand" href="index.html" aria-label="Tyler Lee home">
-          <span>Tyler Lee</span>
-          <small>Electrical / Computer Engineering</small>
-        </a>
-        <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="projects.html">Projects</a>
-          <a href="about.html" aria-current="page">About</a>
-          <a href="contact.html">Contact</a>
-          <a class="nav-github" href="https://github.com/Tylerlee102">GitHub</a>
-        </div>
-      </nav>
-    </header>
-
-    <main id="main">
-      <section class="page-hero" aria-labelledby="about-title">
-        <p class="eyebrow">About</p>
-        <h1 id="about-title">A hardware-focused engineering portfolio.</h1>
-        <p>
-          Tyler Lee is building around FPGA/RTL, embedded systems, hardware
-          engineering, robotics, and computer architecture research.
-        </p>
-      </section>
-
-      <section class="section section-compact" aria-labelledby="focus-title">
-        <div class="split-layout">
-          <div class="section-heading">
-            <p class="eyebrow">Technical focus</p>
-            <h2 id="focus-title">Where the work is concentrated.</h2>
-            <p>
-              The strongest portfolio materials are research-style hardware
-              projects with linked PDFs, diagrams, and source repositories.
-            </p>
-          </div>
-          <div class="focus-stack">
-            <article>
-              <h3>FPGA / RTL</h3>
-              <p>Low-precision datapaths, HLS source, synthesis reports, cosimulation, and RTL review.</p>
-            </article>
-            <article>
-              <h3>Embedded systems</h3>
-              <p>Processor pipelines, RV32I scaffolds, hardware controls, and firmware-facing tests.</p>
-            </article>
-            <article>
-              <h3>Architecture research</h3>
-              <p>Prefetching, pointer provenance, replay capsules, and reproducibility-aware documentation.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-band" aria-labelledby="skills-about-title">
-        <div class="section-heading">
-          <p class="eyebrow">Skills</p>
-          <h2 id="skills-about-title">Tools and areas visible across the work.</h2>
-        </div>
-        <div class="tag-cloud" aria-label="Skills and tools">
-          <span>SystemVerilog</span>
-          <span>Vitis HLS</span>
-          <span>C++</span>
-          <span>Python</span>
-          <span>Vivado</span>
-          <span>RTL cosimulation</span>
-          <span>RV32I</span>
-          <span>ARM / AArch64 framing</span>
-          <span>FPGA datapaths</span>
-          <span>Technical writing</span>
-          <span>Architecture review</span>
-          <span>Embedded pipelines</span>
-        </div>
-      </section>
-
-      <section class="section" aria-labelledby="review-title">
-        <div class="info-panel">
-          <div>
-            <p class="eyebrow">What to review first</p>
-            <h2 id="review-title">Start with the case studies and source repositories.</h2>
-            <p>
-              The best current signal is the combination of project writeups,
-              linked PDFs, diagrams, and source repositories.
-            </p>
-            <!-- CONTENT_TODO_EDUCATION: Add school, degree/program, and expected graduation. -->
-            <!-- CONTENT_TODO_RESUME_PDF: Add assets/docs/resume.pdf and link it here when ready. -->
-          </div>
-          <dl class="summary-list">
-            <div>
-              <dt>Primary profile</dt>
-              <dd><a href="https://github.com/Tylerlee102">github.com/Tylerlee102</a></dd>
-            </div>
-            <div>
-              <dt>Portfolio emphasis</dt>
-              <dd>FPGA/RTL, embedded systems, hardware engineering, robotics, and architecture research.</dd>
-            </div>
-          </dl>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <p>Copyright 2026 Tyler Lee.</p>
-      <nav aria-label="Footer navigation">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-        <a href="https://github.com/Tylerlee102">GitHub</a>
-      </nav>
-    </footer>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

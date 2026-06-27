@@ -1,161 +1,25 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta
       name="description"
       content="Case study for Tyler Lee's Native MXFP4 Gated DeltaNet decode on FPGA project."
-    >
-    <meta name="author" content="Tyler Lee">
-    <meta property="og:title" content="Native MXFP4 Gated DeltaNet Decode on FPGA | Tyler Lee">
+    />
+    <meta name="author" content="Tyler Lee" />
+    <meta property="og:title" content="Native MXFP4 Gated DeltaNet Decode on FPGA | Tyler Lee" />
     <meta
       property="og:description"
       content="FPGA/HLS research prototype for a Gated DeltaNet decode layer with persistent on-chip state and native MXFP4 arithmetic."
-    >
-    <meta property="og:type" content="article">
-    <meta property="og:image" content="https://tylerlee102.github.io/website/assets/img/mxfp4-gdn-datapath.png">
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://tylerlee102.github.io/website/assets/img/mxfp4-gdn-datapath.png" />
     <title>Native MXFP4 Gated DeltaNet Decode on FPGA | Tyler Lee</title>
-    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="assets/js/site.js" defer></script>
+    <link rel="icon" href="/website/assets/img/favicon.svg" type="image/svg+xml" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-
-    <header class="site-header">
-      <nav class="top-nav" aria-label="Primary navigation">
-        <a class="brand" href="index.html" aria-label="Tyler Lee home">
-          <span>Tyler Lee</span>
-          <small>Electrical / Computer Engineering</small>
-        </a>
-        <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="projects.html" aria-current="page">Projects</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-          <a class="nav-github" href="https://github.com/Tylerlee102">GitHub</a>
-        </div>
-      </nav>
-    </header>
-
-    <main id="main">
-      <article class="case-page">
-        <header class="page-hero case-hero">
-          <a class="breadcrumb" href="projects.html">Projects</a>
-          <p class="eyebrow">FPGA / HLS case study</p>
-          <h1>Native MXFP4 Gated DeltaNet decode on FPGA</h1>
-          <p>
-            A draft FPGA research prototype for one Gated DeltaNet decode layer,
-            centered on persistent on-chip state and native microscaled FP4
-            arithmetic.
-          </p>
-          <div class="hero-actions" aria-label="Project links">
-            <a class="button button-primary" href="assets/docs/mxfp4-gdn-draft.pdf">Read draft PDF</a>
-            <a class="button button-secondary" href="https://github.com/Tylerlee102/FPT26_paper_project_share">Open source/support repo</a>
-          </div>
-        </header>
-
-        <div class="case-layout">
-          <div class="case-main">
-            <section aria-labelledby="mxfp4-overview">
-              <h2 id="mxfp4-overview">What it is</h2>
-              <p>
-                The project studies a low-precision FPGA datapath for decode-time
-                Gated DeltaNet work. The design keeps recurrent state close to
-                the compute fabric and uses native E2M1 elements with shared
-                E8M0 block scales instead of widening the inner multiply first.
-              </p>
-            </section>
-
-            <section aria-labelledby="mxfp4-problem">
-              <h2 id="mxfp4-problem">Problem / goal</h2>
-              <p>
-                Linear-attention decode can reduce attention-cache growth, but
-                it still has to read, update, and preserve recurrent state every
-                token. This project asks whether an FPGA datapath can handle that
-                update path with compact MXFP4 arithmetic while keeping the state
-                resident on chip.
-              </p>
-            </section>
-
-            <section aria-labelledby="mxfp4-work">
-              <h2 id="mxfp4-work">What Tyler built or documented</h2>
-              <ul class="detail-list">
-                <li>Native MXFP4 datapath notes for E2M1 elements and E8M0 block scales.</li>
-                <li>Persistent-state kernel structure for a Gated DeltaNet decode layer.</li>
-                <li>Deterministic reference checks and paper-style reporting around the prototype.</li>
-                <li>Project diagrams and a support repository with golden references, HLS source, reports, and scripts.</li>
-              </ul>
-            </section>
-
-            <section aria-labelledby="mxfp4-evidence">
-              <h2 id="mxfp4-evidence">Visible evidence</h2>
-              <dl class="fact-list">
-                <div>
-                  <dt>Target</dt>
-                  <dd>Alveo U55C appears in the draft and support repository as the FPGA target.</dd>
-                </div>
-                <div>
-                  <dt>Flow</dt>
-                  <dd>Golden references, HLS sources, Vitis/Vivado scripts, and paper artifact generation live in the source/support repo.</dd>
-                </div>
-                <div>
-                  <dt>Verification scope</dt>
-                  <dd>Deterministic synthetic vectors, unit tests, HLS reports, and RTL-cosimulation evidence are represented in the linked materials.</dd>
-                </div>
-              </dl>
-            </section>
-
-            <section aria-labelledby="mxfp4-status">
-              <h2 id="mxfp4-status">Project status</h2>
-              <p>
-                Draft research prototype. Synthetic checks and checked-in reports
-                support the current writeup. Realistic Qwen activation capture is
-                still needed before making model-quality or perplexity claims.
-              </p>
-            </section>
-          </div>
-
-          <aside class="case-sidebar" aria-label="Project summary">
-            <figure class="artifact-frame">
-              <img
-                src="assets/img/mxfp4-gdn-datapath.png"
-                width="720"
-                height="940"
-                loading="lazy"
-                decoding="async"
-                alt="Native MXFP4 Gated DeltaNet datapath diagram."
-              >
-              <figcaption>Datapath diagram from the MXFP4 draft.</figcaption>
-            </figure>
-            <dl class="summary-list">
-              <div>
-                <dt>Tools / stack</dt>
-                <dd>Vitis HLS, C++, Vivado, RTL cosimulation, MXFP4 E2M1/E8M0</dd>
-              </div>
-              <div>
-                <dt>Available materials</dt>
-                <dd>Draft PDF, datapath image, and source/support repository</dd>
-              </div>
-              <div>
-                <dt>Technical area</dt>
-                <dd>FPGA acceleration, low-precision arithmetic, hardware dataflow</dd>
-              </div>
-            </dl>
-          </aside>
-        </div>
-      </article>
-    </main>
-
-    <footer class="site-footer">
-      <p>Copyright 2026 Tyler Lee.</p>
-      <nav aria-label="Footer navigation">
-        <a href="projects.html">Projects</a>
-        <a href="project-copper-line.html">COPPER-LINE</a>
-        <a href="contact.html">Contact</a>
-        <a href="https://github.com/Tylerlee102">GitHub</a>
-      </nav>
-    </footer>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
