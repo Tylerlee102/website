@@ -44,7 +44,6 @@ export default function App() {
   const currentPage = getCurrentPage();
 
   useEffect(() => {
-    document.documentElement.classList.add("dark");
     document.title = pageTitles[currentPage] || pageTitles.home;
   }, [currentPage]);
 

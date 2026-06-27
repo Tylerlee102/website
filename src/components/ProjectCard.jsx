@@ -32,7 +32,7 @@ export default function ProjectCard({ project, featured = false }) {
                 width={project.image.width}
                 height={project.image.height}
                 alt={project.image.alt}
-                loading={featured ? "eager" : "lazy"}
+                loading="lazy"
                 decoding="async"
               />
             </a>

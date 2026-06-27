@@ -264,8 +264,8 @@ main,
   inset: -12% 0 auto 0;
   height: 58vh;
   width: 100%;
-  opacity: 0.34;
-  filter: blur(8px) saturate(0.9);
+  opacity: 0.28;
+  filter: blur(6px) saturate(0.9);
 }
 
 .grid-layer {
@@ -288,8 +288,8 @@ main,
     linear-gradient(135deg, rgba(248, 250, 252, 0.055), transparent 34%),
     radial-gradient(ellipse at 24% 18%, rgba(100, 210, 255, 0.14), transparent 36%),
     radial-gradient(ellipse at 80% 74%, rgba(191, 90, 242, 0.08), transparent 42%);
-  filter: blur(24px);
-  opacity: 0.42;
+  filter: blur(18px);
+  opacity: 0.34;
 }
 
 .light-field-a {
@@ -306,7 +306,7 @@ main,
 }
 
 .noise-layer {
-  opacity: 0.1;
+  opacity: 0.08;
   mix-blend-mode: screen;
 }
 
@@ -416,7 +416,7 @@ dt {
   background:
     linear-gradient(145deg, rgba(248, 250, 252, 0.11), rgba(203, 213, 225, 0.04)),
     rgba(11, 16, 32, 0.96);
-  backdrop-filter: blur(24px) saturate(170%);
+  backdrop-filter: blur(18px) saturate(150%);
 }
 
 .mobile-nav-list {
@@ -972,7 +972,7 @@ dt {
     rgba(11, 16, 32, 0.78);
   color: var(--text-main);
   box-shadow: var(--glass-shadow);
-  backdrop-filter: blur(24px) saturate(170%);
+  backdrop-filter: blur(18px) saturate(150%);
 }
 
 .repo-bento-item:hover {
@@ -1421,6 +1421,11 @@ dd {
   }
 
   .aurora-layer {
+    display: none;
+  }
+
+  .light-field,
+  .noise-layer {
     display: none;
   }
 
