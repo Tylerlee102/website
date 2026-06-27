@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta
+      name="description"
+      content="Selected Tyler Lee projects in FPGA/HLS, computer architecture, embedded processor prototypes, and hardware research."
+    >
+    <meta name="author" content="Tyler Lee">
+    <meta property="og:title" content="Projects | Tyler Lee">
+    <meta
+      property="og:description"
+      content="Project hub for Tyler Lee's FPGA, RTL, embedded systems, and architecture research portfolio."
+    >
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://tylerlee102.github.io/website/assets/img/mxfp4-gdn-datapath.png">
+    <title>Projects | Tyler Lee</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a class="brand" href="index.html" aria-label="Tyler Lee home">
+          <span>Tyler Lee</span>
+          <small>Electrical / Computer Engineering</small>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="projects.html" aria-current="page">Projects</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a class="nav-github" href="https://github.com/Tylerlee102">GitHub</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="page-hero" aria-labelledby="page-title">
+        <p class="eyebrow">Selected projects</p>
+        <h1 id="page-title">FPGA, architecture, and embedded systems work.</h1>
+        <p>
+          The portfolio is organized around case studies first, then supporting
+          repositories that show the broader technical direction.
+        </p>
+      </section>
+
+      <section class="section section-compact" aria-labelledby="case-title">
+        <div class="section-heading">
+          <p class="eyebrow">Case studies</p>
+          <h2 id="case-title">Two detailed project pages.</h2>
+          <p>
+            Each page is structured for quick recruiter review: what it is, what
+            Tyler built or reviewed, tools, materials, and status.
+          </p>
+        </div>
+
+        <div class="case-index">
+          <article class="case-row">
+            <div class="case-copy">
+              <p class="repo-type">FPGA / HLS / digital systems</p>
+              <h3>Native MXFP4 Gated DeltaNet decode on FPGA</h3>
+              <p>
+                Draft research prototype for a persistent-state FPGA decode
+                datapath using native MXFP4 arithmetic.
+              </p>
+              <dl class="fact-list">
+                <div>
+                  <dt>Problem</dt>
+                  <dd>Reduce movement around recurrent decode state while preserving a compact low-precision datapath.</dd>
+                </div>
+                <div>
+                  <dt>Materials</dt>
+                  <dd>Draft PDF, datapath diagram, and source/support repository.</dd>
+                </div>
+                <div>
+                  <dt>Visible evidence</dt>
+                  <dd>Alveo U55C target notes, HLS flow, RTL cosimulation, and Vivado reporting in the linked materials.</dd>
+                </div>
+              </dl>
+              <a class="button button-primary" href="project-mxfp4.html">Open case study</a>
+            </div>
+            <a class="case-thumb" href="project-mxfp4.html" aria-label="Open MXFP4 case study">
+              <img
+                src="assets/img/mxfp4-gdn-datapath.png"
+                width="720"
+                height="940"
+                loading="lazy"
+                decoding="async"
+                alt="MXFP4 Gated DeltaNet datapath diagram."
+              >
+            </a>
+          </article>
+
+          <article class="case-row">
+            <div class="case-copy">
+              <p class="repo-type">Computer architecture / hardware security</p>
+              <h3>COPPER-LINE committed pointer-provenance prefetching</h3>
+              <p>
+                Research review about limiting data-memory-dependent prefetching
+                to source words with committed pointer provenance.
+              </p>
+              <dl class="fact-list">
+                <div>
+                  <dt>Problem</dt>
+                  <dd>Explore safer authority for pointer-driven prefetching when data can look address-shaped.</dd>
+                </div>
+                <div>
+                  <dt>Materials</dt>
+                  <dd>Review PDF, preview image, and artifact package repository.</dd>
+                </div>
+                <div>
+                  <dt>Visible evidence</dt>
+                  <dd>Reproduction scripts, paper draft materials, reproducibility notes, and result manifests in the artifact repo.</dd>
+                </div>
+              </dl>
+              <a class="button button-primary" href="project-copper-line.html">Open case study</a>
+            </div>
+            <a class="case-thumb" href="project-copper-line.html" aria-label="Open COPPER-LINE case study">
+              <img
+                src="assets/img/copper-review.jpg"
+                width="1200"
+                height="808"
+                loading="lazy"
+                decoding="async"
+                alt="COPPER-LINE review preview."
+              >
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-band" aria-labelledby="repo-title">
+        <div class="section-heading">
+          <p class="eyebrow">Additional repositories</p>
+          <h2 id="repo-title">Related technical work on GitHub.</h2>
+          <p>
+            These are listed with restrained summaries because the repositories
+            themselves are the best source for their current state.
+          </p>
+        </div>
+
+        <div class="repo-grid repo-grid-four">
+          <article class="repo-card">
+            <p class="repo-type">FPGA/HLS support</p>
+            <h3>FPT26 paper project share</h3>
+            <p>
+              Support repository for the MXFP4 Gated DeltaNet FPGA accelerator,
+              including golden references, HLS source, reports, and scripts.
+            </p>
+            <a class="text-link" href="https://github.com/Tylerlee102/FPT26_paper_project_share">Open repository</a>
+          </article>
+          <article class="repo-card">
+            <p class="repo-type">SystemVerilog prototype</p>
+            <h3>PipeSense-ARM</h3>
+            <p>
+              ARM-like educational embedded pipeline with a small hardware
+              observer/controller for adaptive behavior experiments.
+            </p>
+            <a class="text-link" href="https://github.com/Tylerlee102/PipeSense-ARM">Open repository</a>
+          </article>
+          <article class="repo-card">
+            <p class="repo-type">RV32I replay scaffold</p>
+            <h3>ReplayCapsule-RV</h3>
+            <p>
+              Event-stream hardware modules and scripts for deterministic replay
+              capsules around embedded RV32I failures.
+            </p>
+            <a class="text-link" href="https://github.com/Tylerlee102/ASP-DAC">Open repository</a>
+          </article>
+          <article class="repo-card">
+            <p class="repo-type">COPPER artifact package</p>
+            <h3>novel-arm</h3>
+            <p>
+              Reviewer-facing artifact package for COPPER, with reproduction
+              scripts, paper draft materials, and reproducibility notes.
+            </p>
+            <a class="text-link" href="https://github.com/Tylerlee102/novel-arm">Open repository</a>
+          </article>
+          <article class="repo-card">
+            <p class="repo-type">Portfolio source</p>
+            <h3>Website</h3>
+            <p>
+              Static GitHub Pages portfolio source with project pages, assets,
+              and a Pages workflow for deployment.
+            </p>
+            <a class="text-link" href="https://github.com/Tylerlee102/website">Open repository</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Copyright 2026 Tyler Lee.</p>
+      <nav aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://github.com/Tylerlee102">GitHub</a>
+      </nav>
+    </footer>
+  </body>
+</html>

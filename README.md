@@ -1,6 +1,6 @@
-# Tyler Lee Electrical Engineering Portfolio
+# Tyler Lee Electrical / Computer Engineering Portfolio
 
-Static GitHub Pages portfolio for Tyler Lee, focused on embedded systems, FPGA and digital design, robotics, hardware systems, and evidence-backed engineering research.
+Static GitHub Pages portfolio for Tyler Lee, focused on FPGA/RTL, embedded systems, digital design, hardware engineering, robotics, and computer architecture research.
 
 Live site:
 
@@ -8,9 +8,19 @@ Live site:
 https://tylerlee102.github.io/website/
 ```
 
-## Edit Content
+## Site Structure
 
-Most public-facing content lives in `index.html`.
+Public-facing pages:
+
+- `index.html` for the recruiter landing page
+- `projects.html` for the project hub
+- `project-mxfp4.html` for the MXFP4 FPGA/HLS case study
+- `project-copper-line.html` for the COPPER-LINE architecture case study
+- `about.html` for technical focus, skills, and resume notes
+- `contact.html` for GitHub/contact links
+- `CONTENT_TODO.md` for missing details Tyler should provide
+
+## Edit Content
 
 Update only verified information:
 
@@ -19,7 +29,7 @@ Update only verified information:
 - Project source repositories, demos, videos, reports, and reproduction notes
 - Education, experience, research roles, technical team work, and skills
 
-Public-facing pending fields should be replaced before deployment when a fact is ready for recruiters.
+Update the site only with details that are accurate and ready for recruiters.
 
 ## Documents
 
@@ -30,7 +40,7 @@ Put downloadable documents in `assets/docs/`.
 - `copper-research-draft-review.pdf` for the COPPER case study
 - Future project reports or one-page PDFs
 
-After adding `assets/docs/resume.pdf`, add or update resume links in `index.html`.
+After adding `assets/docs/resume.pdf`, add or update resume links in `about.html` and `contact.html`.
 
 ## Images
 
@@ -66,9 +76,9 @@ This repo deploys through GitHub Actions using `.github/workflows/pages.yml`.
 2. Confirm repository Settings -> Pages is set to GitHub Actions.
 3. Wait for the `Deploy static site to GitHub Pages` workflow to finish.
 
-The workflow stages only:
+The workflow stages:
 
-- `index.html`
+- all root-level `.html` pages
 - `.nojekyll`
 - `assets/`
 

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta
+      name="description"
+      content="Case study for Tyler Lee's COPPER-LINE computer architecture research review."
+    >
+    <meta name="author" content="Tyler Lee">
+    <meta property="og:title" content="COPPER-LINE Prefetching Research Review | Tyler Lee">
+    <meta
+      property="og:description"
+      content="Computer architecture research review about committed pointer provenance for safer data-memory-dependent prefetching."
+    >
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://tylerlee102.github.io/website/assets/img/copper-review.jpg">
+    <title>COPPER-LINE Prefetching Research Review | Tyler Lee</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a class="brand" href="index.html" aria-label="Tyler Lee home">
+          <span>Tyler Lee</span>
+          <small>Electrical / Computer Engineering</small>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="projects.html" aria-current="page">Projects</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a class="nav-github" href="https://github.com/Tylerlee102">GitHub</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <article class="case-page">
+        <header class="page-hero case-hero">
+          <a class="breadcrumb" href="projects.html">Projects</a>
+          <p class="eyebrow">Computer architecture case study</p>
+          <h1>COPPER-LINE committed pointer-provenance prefetching</h1>
+          <p>
+            A research review about restricting data-memory-dependent prefetching
+            to source words that have been proven by committed architectural
+            execution.
+          </p>
+          <div class="hero-actions" aria-label="Project links">
+            <a class="button button-primary" href="assets/docs/copper-research-draft-review.pdf">Read review PDF</a>
+            <a class="button button-secondary" href="https://github.com/Tylerlee102/novel-arm">Open artifact repo</a>
+            <a class="button button-secondary" href="assets/img/copper-review.jpg">Open preview image</a>
+          </div>
+        </header>
+
+        <div class="case-layout">
+          <div class="case-main">
+            <section aria-labelledby="copper-overview">
+              <h2 id="copper-overview">What it is</h2>
+              <p>
+                COPPER-LINE is framed as a computer architecture and hardware
+                security review. It studies how a prefetcher should decide
+                whether memory contents are allowed to drive future memory
+                requests.
+              </p>
+            </section>
+
+            <section aria-labelledby="copper-problem">
+              <h2 id="copper-problem">Problem / goal</h2>
+              <p>
+                Data-memory-dependent prefetchers can treat memory contents as
+                future addresses. That can be useful for pointer-heavy workloads,
+                but it also raises safety questions when ordinary data happens
+                to look like an address. The review explores an authority model
+                based on committed pointer provenance.
+              </p>
+            </section>
+
+            <section aria-labelledby="copper-work">
+              <h2 id="copper-work">What Tyler reviewed or documented</h2>
+              <ul class="detail-list">
+                <li>Mechanism overview for committed pointer-provenance gating.</li>
+                <li>ARM/AArch64 framing and gem5-style evaluation context.</li>
+                <li>RTL and assertion discussion around proof lifetime and invalidation.</li>
+                <li>Prior-art and security positioning for data-memory-dependent prefetching.</li>
+              </ul>
+            </section>
+
+            <section aria-labelledby="copper-evidence">
+              <h2 id="copper-evidence">Visible evidence</h2>
+              <dl class="fact-list">
+                <div>
+                  <dt>Artifact package</dt>
+                  <dd>The linked repository includes reproduction scripts, paper draft materials, a reproduction guide, and reproducibility notes.</dd>
+                </div>
+                <div>
+                  <dt>Architecture materials</dt>
+                  <dd>The review covers provenance gating, translation checks, proof lifetime, and RTL/assertion discussion.</dd>
+                </div>
+                <div>
+                  <dt>Evaluation context</dt>
+                  <dd>The linked materials frame simulation, RTL/Vivado evidence, and workload notes as research artifacts rather than product claims.</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section aria-labelledby="copper-status">
+              <h2 id="copper-status">Project status</h2>
+              <p>
+                Draft review in PDF form. The portfolio presents it as a research
+                review, not as a peer-reviewed publication or production hardware
+                integration.
+              </p>
+            </section>
+          </div>
+
+          <aside class="case-sidebar" aria-label="Project summary">
+            <figure class="artifact-frame">
+              <img
+                src="assets/img/copper-review.jpg"
+                width="1200"
+                height="808"
+                loading="lazy"
+                decoding="async"
+                alt="COPPER-LINE review preview."
+              >
+              <figcaption>Preview image for the COPPER-LINE research review.</figcaption>
+            </figure>
+            <dl class="summary-list">
+              <div>
+                <dt>Tools / stack</dt>
+                <dd>ARM/AArch64 framing, gem5 context, SystemVerilog/SVA discussion, Vivado RTL evidence</dd>
+              </div>
+              <div>
+                <dt>Available materials</dt>
+                <dd>Review PDF, preview image, and public artifact repository</dd>
+              </div>
+              <div>
+                <dt>Technical area</dt>
+                <dd>Prefetching, pointer provenance, architecture review, hardware security</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p>Copyright 2026 Tyler Lee.</p>
+      <nav aria-label="Footer navigation">
+        <a href="projects.html">Projects</a>
+        <a href="project-mxfp4.html">MXFP4</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://github.com/Tylerlee102">GitHub</a>
+      </nav>
+    </footer>
+  </body>
+</html>
