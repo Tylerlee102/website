@@ -24,12 +24,12 @@ export default function LiquidGlassPanel({
     >
       <LiquidGlass
         borderRadius={radius}
-        blur={0.42}
-        contrast={1.18}
-        brightness={1.08}
-        saturation={1.24}
-        shadowIntensity={0.22}
-        displacementScale={1.3}
+        blur={0.36}
+        contrast={1.14}
+        brightness={1}
+        saturation={1.12}
+        shadowIntensity={0.24}
+        displacementScale={1.12}
         elasticity={0.46}
         zIndex={1}
         className="liquid-filter"
@@ -42,7 +42,7 @@ export default function LiquidGlassPanel({
           duration={9}
           borderWidth={1}
           colorFrom="#64d2ff"
-          colorTo="#8d7aff"
+          colorTo="#bf5af2"
         />
       ) : null}
     </Component>
