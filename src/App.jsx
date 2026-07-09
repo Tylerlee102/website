@@ -165,10 +165,13 @@ function ProjectsShowcase({ detailed = false }) {
     <section className="section projects-section" id="projects" aria-labelledby="projects-title">
       <Reveal>
         <div className="section-heading">
-          <h2 id="projects-title">Research and digital systems work.</h2>
+          <h2 id="projects-title">
+            {detailed ? "Case studies." : "Research and digital systems work."}
+          </h2>
           <p>
-            The detailed pages separate problem framing, tools, available materials,
-            visible evidence, and current status.
+            {detailed
+              ? "Start with the project evidence, then follow the linked source materials."
+              : "The detailed pages separate problem framing, tools, available materials, visible evidence, and current status."}
           </p>
         </div>
       </Reveal>

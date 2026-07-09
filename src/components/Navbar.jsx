@@ -23,7 +23,7 @@ import { linkProps, sitePath } from "@/lib/routes";
 export default function Navbar({ currentPage }) {
   return (
     <header className="site-header">
-      <LiquidGlassPanel as="nav" className="nav-shell" radius={999} aria-label="Primary navigation">
+      <LiquidGlassPanel as="nav" className="nav-shell" radius={20} aria-label="Primary navigation">
         <a className="brand-lockup" href={sitePath("index.html")} aria-label="Tyler Lee home">
           <span>{site.name}</span>
           <small>{site.shortRole}</small>

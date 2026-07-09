@@ -1,5 +1,4 @@
 import { Cpu, FileText, Radio, ShieldCheck } from "lucide-react";
-import { Backlight } from "@/components/ui/backlight";
 import GlassChip from "@/components/GlassChip";
 import LiquidGlassPanel from "@/components/LiquidGlassPanel";
 import { caseStudies } from "@/data/portfolio";
@@ -24,8 +23,8 @@ export default function HeroDashboard() {
 
   return (
     <div className="hero-dashboard" aria-label="Engineering dashboard preview">
-      <Backlight blur={18} className="dashboard-backlight">
-        <LiquidGlassPanel className="dashboard-device" radius={34} beam strong>
+      <div className="dashboard-backlight">
+        <LiquidGlassPanel className="dashboard-device" radius={24} strong>
           <div className="dashboard-topline">
             <span>Engineering signal console</span>
             <strong>Portfolio</strong>
@@ -61,7 +60,7 @@ export default function HeroDashboard() {
             })}
           </div>
         </LiquidGlassPanel>
-      </Backlight>
+      </div>
 
       <LiquidGlassPanel className="floating-mini-card mini-card-a" radius={22}>
         <span>Public artifacts</span>

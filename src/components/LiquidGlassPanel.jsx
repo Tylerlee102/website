@@ -1,4 +1,3 @@
-import { LiquidGlass } from "@liquidglass/react";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { cn } from "@/lib/utils";
 
@@ -10,6 +9,7 @@ export default function LiquidGlassPanel({
   radius = 28,
   beam = false,
   strong = false,
+  style,
   ...props
 }) {
   return (
@@ -19,23 +19,10 @@ export default function LiquidGlassPanel({
         strong && "liquid-panel-strong",
         className,
       )}
-      style={{ "--panel-radius": `${radius}px` }}
+      style={{ "--panel-radius": `${radius}px`, ...style }}
       {...props}
     >
-      <LiquidGlass
-        borderRadius={radius}
-        blur={0.36}
-        contrast={1.14}
-        brightness={1}
-        saturation={1.12}
-        shadowIntensity={0.24}
-        displacementScale={1.12}
-        elasticity={0.46}
-        zIndex={1}
-        className="liquid-filter"
-      >
-        <div className={cn("liquid-content", innerClassName)}>{children}</div>
-      </LiquidGlass>
+      <div className={cn("liquid-content", innerClassName)}>{children}</div>
       {beam ? (
         <BorderBeam
           size={96}

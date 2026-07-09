@@ -33,8 +33,8 @@ export default function Hero() {
             ))}
           </Reveal>
           <Reveal as="p" className="hero-lede" delay={0.16} variant="hero">
-            Selected work spans low-precision FPGA/HLS datapaths, architecture research reviews,
-            embedded processor prototypes, and hardware documentation.
+            I turn research ideas into reviewable hardware artifacts: diagrams, HLS and RTL
+            prototypes, synthesis evidence, and clear technical notes.
           </Reveal>
           <Reveal className="action-row" aria-label="Primary actions" delay={0.2} variant="hero">
             <GlassButton href="projects.html" icon={CircuitBoard}>
@@ -46,7 +46,7 @@ export default function Hero() {
           </Reveal>
         </div>
 
-        <Reveal delay={0.1} variant="panel">
+        <Reveal variant="hero">
           <HeroDashboard />
         </Reveal>
       </div>

@@ -19,16 +19,17 @@ export default function Reveal({
   const reduceMotion = useReducedMotion();
   const Component = motion[as] || motion.div;
   const preset = revealPresets[variant] || revealPresets.default;
+  const animateOnEntry = !reduceMotion && variant !== "hero";
 
   return (
     <Component
       className={className}
-      initial={reduceMotion ? false : { opacity: 0, y: preset.y, scale: preset.scale }}
-      whileInView={reduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
+      initial={animateOnEntry ? { opacity: 0, y: preset.y, scale: preset.scale } : false}
+      whileInView={animateOnEntry ? { opacity: 1, y: 0, scale: 1 } : undefined}
       viewport={{ once: true, amount: 0.18, margin: "0px 0px -8% 0px" }}
       style={{
         transformOrigin: "50% 60%",
-        willChange: reduceMotion ? undefined : "opacity, transform",
+        willChange: animateOnEntry ? "opacity, transform" : undefined,
         ...style,
       }}
       transition={{

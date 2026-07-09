@@ -1,8 +1,8 @@
 export const site = {
   name: "Tyler Lee",
-  shortRole: "Electrical / Computer Engineering",
+  shortRole: "ECE · FPGA / RTL",
   role:
-    "Electrical / Computer Engineering portfolio focused on FPGA, RTL, embedded systems, robotics, and computer architecture research.",
+    "Electrical and computer engineer focused on FPGA datapaths, RTL, embedded systems, and computer architecture.",
   description:
     "Hardware-focused engineering portfolio with FPGA/HLS, embedded systems, and computer architecture research projects.",
   github: "https://github.com/Tylerlee102",
