@@ -25,7 +25,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "row-span-1 flex flex-col justify-between gap-4 p-4 transition",
+        "row-span-1 flex flex-col justify-between gap-4 p-4",
         className
       )}>
       {header}

@@ -1,4 +1,3 @@
-import { BorderBeam } from "@/components/ui/border-beam";
 import { cn } from "@/lib/utils";
 
 export default function LiquidGlassPanel({
@@ -7,7 +6,7 @@ export default function LiquidGlassPanel({
   className,
   innerClassName,
   radius = 28,
-  beam = false,
+  beam: _beam = false,
   strong = false,
   style,
   ...props
@@ -23,15 +22,6 @@ export default function LiquidGlassPanel({
       {...props}
     >
       <div className={cn("liquid-content", innerClassName)}>{children}</div>
-      {beam ? (
-        <BorderBeam
-          size={96}
-          duration={9}
-          borderWidth={1}
-          colorFrom="#64d2ff"
-          colorTo="#bf5af2"
-        />
-      ) : null}
     </Component>
   );
 }
