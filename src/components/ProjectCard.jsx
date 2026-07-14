@@ -1,12 +1,4 @@
-import { ExternalLink, FileText, Image as ImageIcon } from "lucide-react";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { ExternalLink, FileText } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import GlassButton from "@/components/GlassButton";
 import GlassChip from "@/components/GlassChip";
@@ -20,7 +12,7 @@ const techTone = (tech) => {
   return "slate";
 };
 
-export default function ProjectCard({ project, featured = false }) {
+export default function ProjectCard({ project, featured = false, index = 0 }) {
   return (
     <LiquidGlassPanel
       as="article"
@@ -49,6 +41,9 @@ export default function ProjectCard({ project, featured = false }) {
 
       <div className="project-body">
         <div className="project-meta">
+          <span className="project-index" aria-hidden="true">
+            {String(index + 1).padStart(2, "0")}
+          </span>
           <Badge variant="outline" className="status-badge">
             {project.status}
           </Badge>
@@ -70,28 +65,8 @@ export default function ProjectCard({ project, featured = false }) {
           <GlassButton href={project.sourceLink.href} variant="secondary" icon={ExternalLink}>
             Repository
           </GlassButton>
-          <Dialog>
-            <DialogTrigger asChild>
-              <button className="preview-button" type="button">
-                <ImageIcon aria-hidden="true" strokeWidth={1.8} />
-                <span>Preview</span>
-              </button>
-            </DialogTrigger>
-            <DialogContent className="preview-dialog">
-              <DialogHeader>
-                <DialogTitle>{project.shortTitle}</DialogTitle>
-                <DialogDescription>{project.oneLine}</DialogDescription>
-              </DialogHeader>
-              <img
-                src={sitePath(project.image.src)}
-                width={project.image.width}
-                height={project.image.height}
-                alt={project.image.alt}
-              />
-            </DialogContent>
-          </Dialog>
         </div>
-        <p className="project-caveat">{project.statusDetail}</p>
+        <p className="project-caveat">Status and validation limits are documented in the case study.</p>
       </div>
     </LiquidGlassPanel>
   );

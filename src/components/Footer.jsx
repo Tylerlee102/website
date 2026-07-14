@@ -5,7 +5,7 @@ import { linkProps, sitePath } from "@/lib/routes";
 export default function Footer() {
   return (
     <footer className="site-footer">
-      <p>Copyright 2026 Tyler Lee.</p>
+      <p>© 2026 Tyler Lee. Built for technical review.</p>
       <nav aria-label="Footer navigation">
         {navItems.slice(1).map((item) => (
           <a key={item.href} href={sitePath(item.href)}>

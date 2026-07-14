@@ -1,17 +1,14 @@
 import { CircuitBoard, Code2 } from "lucide-react";
 import GlassButton from "@/components/GlassButton";
-import GlassChip from "@/components/GlassChip";
 import HeroDashboard from "@/components/HeroDashboard";
 import Reveal from "@/components/Reveal";
-import { focusAreas, site } from "@/data/portfolio";
+import { site } from "@/data/portfolio";
 
-const focusTone = {
-  "FPGA / RTL": "cyan",
-  "Embedded systems": "mint",
-  "Hardware engineering": "cyan",
-  Robotics: "mint",
-  "Architecture research": "violet",
-};
+const proofPoints = [
+  { value: "02", label: "case studies" },
+  { value: "05", label: "public repositories" },
+  { value: "Clear", label: "draft boundaries" },
+];
 
 export default function Hero() {
   return (
@@ -19,24 +16,24 @@ export default function Hero() {
       <div className="hero-grid">
         <div className="hero-copy">
           <Reveal as="p" className="section-kicker" variant="hero">
-            Hardware-focused engineering portfolio
+            Tyler Lee / Electrical &amp; computer engineering
           </Reveal>
           <Reveal as="h1" id="hero-title" delay={0.04} variant="hero">
-            Tyler Lee
+            From research idea to reviewable hardware.
           </Reveal>
           <Reveal as="p" className="hero-statement" delay={0.08} variant="hero">
-            {site.role}
+            FPGA datapaths, RTL, embedded systems, and computer architecture—documented
+            with evidence, not inflated claims.
           </Reveal>
-          <Reveal className="focus-chip-row" aria-label="Technical focus areas" delay={0.12} variant="hero">
-            {focusAreas.map((area) => (
-              <GlassChip key={area} tone={focusTone[area] || "cyan"}>{area}</GlassChip>
+          <Reveal className="hero-proof-row" aria-label="Portfolio overview" delay={0.12} variant="hero">
+            {proofPoints.map((point) => (
+              <div key={point.label}>
+                <strong>{point.value}</strong>
+                <span>{point.label}</span>
+              </div>
             ))}
           </Reveal>
-          <Reveal as="p" className="hero-lede" delay={0.16} variant="hero">
-            I turn research ideas into reviewable hardware artifacts: diagrams, HLS and RTL
-            prototypes, synthesis evidence, and clear technical notes.
-          </Reveal>
-          <Reveal className="action-row" aria-label="Primary actions" delay={0.2} variant="hero">
+          <Reveal className="action-row" aria-label="Primary actions" delay={0.16} variant="hero">
             <GlassButton href="projects.html" icon={CircuitBoard}>
               View projects
             </GlassButton>

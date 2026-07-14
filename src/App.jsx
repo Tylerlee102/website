@@ -184,7 +184,7 @@ function ProjectsShowcase({ detailed = false }) {
             delay={index * 0.06}
             variant="card"
           >
-            <ProjectCard project={project} featured={index === 0 || detailed} />
+            <ProjectCard project={project} featured={index === 0 || detailed} index={index} />
           </Reveal>
         ))}
       </BentoGrid>

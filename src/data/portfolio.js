@@ -1,6 +1,6 @@
 export const site = {
   name: "Tyler Lee",
-  shortRole: "ECE · FPGA / RTL",
+  shortRole: "ECE / FPGA / RTL",
   role:
     "Electrical and computer engineer focused on FPGA datapaths, RTL, embedded systems, and computer architecture.",
   description:
